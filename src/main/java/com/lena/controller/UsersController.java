@@ -2,17 +2,17 @@ package com.lena.controller;
 
 
 import com.lena.base.result.Myresult;
-import com.lena.base.result.Results;
+import com.lena.base.result.PageTableRequest;
 import com.lena.entity.Users;
 import com.lena.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
 
 /**
  * <p>
@@ -20,26 +20,25 @@ import java.util.List;
  * </p>
  *
  * @author taoxia
- * @since 2019-09-29
+ * @since 2019-09-30
  */
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UsersController {
-
     @Autowired
     private UsersService usersService;
-
     @GetMapping("/list")
     @ResponseBody
-    public Myresult<Users> getuserslist(){
-        List<Users> list = usersService.list();
-        Myresult myresult=new Myresult();
-        myresult.setCode(0);
-        myresult.setMsg("success....");
-        myresult.setCount(list.size());
-        myresult.setData(list);
+    public Myresult<Users> getUsers(PageTableRequest page){
+        Myresult<Users> result=new Myresult<>();
+        page.countOffset();
+        return usersService.getAllUsersByPage(page.getOffset(),page.getLimit());
+    }
 
-        return myresult;
+    @GetMapping("/add")
+    public String addUser(Model model){
+        model.addAttribute(new Users());
+        return "user/user-add";
     }
 
 }

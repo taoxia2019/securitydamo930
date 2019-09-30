@@ -2,7 +2,11 @@ package com.lena.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+import java.time.LocalDate;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
+import java.time.LocalDateTime;
 import java.io.Serializable;
 
 /**
@@ -11,8 +15,9 @@ import java.io.Serializable;
  * </p>
  *
  * @author taoxia
- * @since 2019-09-29
+ * @since 2019-09-30
  */
+@Data
 @TableName("sys_users")
 public class Users implements Serializable {
 
@@ -35,82 +40,14 @@ private static final long serialVersionUID=1L;
 
     private String gangweimingcheng;
 
+    private Integer status;
 
-    public Integer getId() {
-        return id;
-    }
+    private LocalDateTime createtime;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    private LocalDateTime updatetime;
 
-    public String getUsername() {
-        return username;
-    }
+    private LocalDate birthday;
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    private Integer sex;
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getDept() {
-        return dept;
-    }
-
-    public void setDept(String dept) {
-        this.dept = dept;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getHeadimage() {
-        return headimage;
-    }
-
-    public void setHeadimage(String headimage) {
-        this.headimage = headimage;
-    }
-
-    public String getGangweimingcheng() {
-        return gangweimingcheng;
-    }
-
-    public void setGangweimingcheng(String gangweimingcheng) {
-        this.gangweimingcheng = gangweimingcheng;
-    }
-
-    @Override
-    public String toString() {
-        return "Users{" +
-        "id=" + id +
-        ", username=" + username +
-        ", password=" + password +
-        ", phone=" + phone +
-        ", dept=" + dept +
-        ", email=" + email +
-        ", headimage=" + headimage +
-        ", gangweimingcheng=" + gangweimingcheng +
-        "}";
-    }
 }

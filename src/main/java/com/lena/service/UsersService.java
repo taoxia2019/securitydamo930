@@ -1,9 +1,8 @@
 package com.lena.service;
 
-import com.lena.entity.Users;
+import com.lena.base.result.Myresult;
 import com.baomidou.mybatisplus.extension.service.IService;
-
-import java.util.List;
+import com.lena.entity.Users;
 
 /**
  * <p>
@@ -11,8 +10,10 @@ import java.util.List;
  * </p>
  *
  * @author taoxia
- * @since 2019-09-29
+ * @since 2019-09-30
  */
 public interface UsersService extends IService<Users> {
 
+
+    Myresult<Users> getAllUsersByPage(Integer offset, Integer limit);
 }

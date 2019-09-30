@@ -24,7 +24,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class MysqlGenerator {
     private static String author ="taoxia";//作者名称
-    private static String outputDir ="d:\\java";//生成的位置
+    private static String outputDir ="d:\\java1";//生成的位置
     private static String driver ="com.mysql.cj.jdbc.Driver";//驱动，注意mysql版本,此为8.0以上版本
     //连接路径, 注意修改数据库名称
     private static String url ="jdbc:mysql://localhost:3306/securitydemo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";

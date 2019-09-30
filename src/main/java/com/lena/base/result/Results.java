@@ -16,8 +16,8 @@ import java.util.List;
 @Data
 public class Results<T> implements Serializable {
     int count;//数据数量
-    Integer code;//代码
-    String msg;//信息
+    Integer code=0;//代码
+    String msg="";//信息
     List<T> datas;//返回数据类型
     T data;//任何数据类型
 
