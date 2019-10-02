@@ -1,7 +1,7 @@
 package com.lena.controller;
 
 
-import com.lena.base.result.Myresult;
+
 import com.lena.base.result.PageTableRequest;
 import com.lena.base.result.Results;
 import com.lena.dto.UsersDTO;
@@ -18,6 +18,7 @@ import org.springframework.web.context.request.WebRequest;
 
 import java.text.SimpleDateFormat;
 import java.time.*;
+
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
@@ -54,8 +55,11 @@ public class UsersController {
     public Results<Users> saveUser(UsersDTO usersDTO,Integer roleid){
         System.out.println(usersDTO.getUsername());
         System.out.println(roleid);
+        System.out.println(usersDTO.getPassword());
+        System.out.println(usersDTO.getBirthday());
         usersDTO.setStatus(1);
         usersDTO.setPassword(MD5.getMD5(usersDTO.getPassword()));
+        System.out.println(usersDTO.getPassword());
         return usersService.saveUsers(usersDTO,roleid);
     }
 
@@ -65,12 +69,6 @@ public class UsersController {
     @InitBinder
     public void initBinder(WebDataBinder binder,WebRequest request){
         SimpleDateFormat formatter = new SimpleDateFormat(pattern);
-
-        java.util.Date date = new java.util.Date();
-        Instant instant = date.toInstant();
-        ZoneId zone = ZoneId.systemDefault();
-        LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zone);
-        LocalDate localDate = localDateTime.toLocalDate();
 
         binder.registerCustomEditor(Date.class,new CustomDateEditor(formatter,true));
     }

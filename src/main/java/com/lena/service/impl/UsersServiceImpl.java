@@ -43,17 +43,20 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, Users> implements
 
     @Override
     public Results<Users> saveUsers(UsersDTO usersDTO, Integer roleid) {
-        if(roleid!=null){
+        System.out.println(roleid + "角色ID");
+        if (roleid != null) {
             usersDTO.setCreatetime(LocalDateTime.now());
             usersDTO.setUpdatetime(LocalDateTime.now());
             usersMapper.insert(usersDTO);
 
-            UserRole userRole=new UserRole();
+            UserRole userRole = new UserRole();
             userRole.setRoleid(roleid);
-            userRole.setRoleid(usersDTO.getId().intValue());
+            userRole.setUserid(usersDTO.getId());
             userRoleMapper.insert(userRole);
-            Results.success();
+            return Results.success();
+        } else {
+            return Results.failure();
         }
-        return Results.failure();
+
     }
 }

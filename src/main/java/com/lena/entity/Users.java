@@ -8,6 +8,7 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -46,7 +47,7 @@ private static final long serialVersionUID=1L;
 
     private LocalDateTime updatetime;
 
-    private LocalDate birthday;
+    private Date birthday;
 
     private Integer sex;
 
