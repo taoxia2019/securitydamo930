@@ -20,4 +20,12 @@ public interface UsersService extends IService<Users> {
     Results<Users> getAllUsersByPage(Integer offset, Integer limit);
 
     Results<Users> saveUsers(UsersDTO usersDTO, Integer roleid);
+
+
+
+    Results<Users> updateUsers(UsersDTO usersDTO, Integer roleid);
+
+    Users getUserByPhone(String phone);
+
+    int deleteUserByid(Integer id);
 }

@@ -1,5 +1,7 @@
 package com.lena.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.lena.base.result.Myresult;
 import com.lena.base.result.Results;
 import com.lena.dao.RoleMapper;
@@ -43,7 +45,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, Users> implements
 
     @Override
     public Results<Users> saveUsers(UsersDTO usersDTO, Integer roleid) {
-        System.out.println(roleid + "角色ID");
+
         if (roleid != null) {
             usersDTO.setCreatetime(LocalDateTime.now());
             usersDTO.setUpdatetime(LocalDateTime.now());
@@ -58,5 +60,40 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, Users> implements
             return Results.failure();
         }
 
+    }
+
+
+
+    @Override
+    public Results<Users> updateUsers(UsersDTO usersDTO, Integer roleid) {
+        if (roleid != null) {
+            //更新用户表
+            usersMapper.updateById(usersDTO);
+            //更新用户角色表
+            UserRole userRole = new UserRole();
+            userRole.setUserid(usersDTO.getId());
+            userRole.setRoleid(roleid);
+
+            if((userRoleMapper.selectOne(new QueryWrapper<UserRole>().eq("userid", usersDTO.getId())))!=null){
+                userRoleMapper.update(userRole,new QueryWrapper<UserRole>().eq("userid", usersDTO.getId()));
+            }else {
+                userRoleMapper.insert(userRole);
+            }
+            return Results.success();
+        } else {
+            return Results.failure();
+        }
+    }
+
+    @Override
+    public Users getUserByPhone(String phone) {
+        return usersMapper.getUserByPhone(phone);
+    }
+
+
+    public int deleteUserByid(Integer id){
+
+        int id1 = userRoleMapper.delete(new QueryWrapper<UserRole>().eq("userid", id));
+        return usersMapper.deleteById(id);
     }
 }

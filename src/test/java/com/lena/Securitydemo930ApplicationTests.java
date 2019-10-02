@@ -1,8 +1,14 @@
 package com.lena;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lena.dao.RoleMapper;
+import com.lena.dao.UserRoleMapper;
+import com.lena.dao.UsersMapper;
+import com.lena.entity.UserRole;
+import com.lena.entity.Users;
 import com.lena.service.RoleService;
+import com.lena.service.UserRoleService;
 import com.lena.service.UsersService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,12 +24,21 @@ public class Securitydemo930ApplicationTests {
 	@Autowired
 	private RoleMapper roleMapper;
 
+	@Autowired
+	private UserRoleService userRoleService;
+	@Autowired
+	private  UserRoleMapper userRoleMapper;
+
+
 
 	@Test
 	public void contextLoads() {
-		//usersService.list().forEach(u-> System.out.println(u.getStatus()));
-		roleMapper.selectList(null).forEach(r-> System.out.println(r.getName()));
-		System.out.println(roleMapper.selectCount(null));
+		UserRole ur = userRoleService.getOne(new QueryWrapper<UserRole>().eq("userid", 18));
+		System.out.println(ur.getRoleid());
+		System.out.println("-----------");
+		UserRole userRole = userRoleMapper.selectOne(new QueryWrapper<UserRole>().eq("userid", 18));
+		System.out.println(userRole.getRoleid());
+		System.out.println("---0000000000---");
 	}
 
 }

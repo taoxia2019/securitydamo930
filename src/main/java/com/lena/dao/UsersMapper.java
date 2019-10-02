@@ -23,6 +23,8 @@ public interface UsersMapper extends BaseMapper<Users> {
     @Select("select * from sys_users t order by t.id limit #{startPosition},#{limit}")
     List<Users> getallUsersByPage(@Param("startPosition")Integer startPosition,@Param("limit")Integer limit);
 
+    @Select("select * from sys_users t where t.phone=#{phone}")
+    Users getUserByPhone(String phone);
     @Select("select count(*) from sys_users t")
     Long countAllUsers();
 }

@@ -19,15 +19,7 @@
         <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i></a>
 </div>
 
-<!--<div class="layui-row">
-    <form class="layui-form layui-col-md12 x-so" id="contentsearchAdd">
-        <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input">
-        <button class="layui-btn" lay-submit="" lay-filter="search" permission="sys:user:query"><i class="layui-icon">&#xe615;</i></button>
-        <a class="layui-btn" onclick="x_admin_show('新增用户','/user/add')" permission="sys:user:add"><i class="layui-icon"></i>新增用户</a>
-    </form>
 
-
-</div>-->
 <div class="layui-card-body ">
     <form class="layui-form layui-col-space5">
         <div class="layui-inline layui-show-xs-block">
@@ -52,7 +44,7 @@
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
-                <table id="demo" lay-filter="test"></table>
+                <table id="demo" lay-filter="member"></table>
             </div>
         </div>
     </div>
@@ -62,14 +54,7 @@
     <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
-<!--//头部工具栏
-<script type="text/html" id="toolbarDemo">
-    <div class="layui-btn-container">
-        <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
-        <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
-        <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
-    </div>
-</script>-->
+
 
 
 </body>
@@ -109,6 +94,33 @@
             ]
         });
 
+        //监听工具条
+        table.on('tool(member)',function (obj) {
+            var data =obj.data;
+            if(obj.event=='del'){
+                layer.confirm('真的删除行吗',function(index) {
+                    $.ajax({
+                        url:"/user/delete",
+                        type:"GET",
+                        data:{id:data.id},
+                        dataType:'json',
+                        success:function (result) {
+                            layer.alert("删除成功",{icon:1},function (index1) {
+                                layer.close(index1);
+                                xadmin.father_reload();
+                                
+                            });
+                            
+                        },
+                    });
+                    
+                });
+            }else if(obj.event==='edit'){
+                xadmin.open('编辑用户信息','/user/edit/?id='+data.id);
+
+            }
+            
+        });
     });
 
 </script>
