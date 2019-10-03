@@ -26,5 +26,12 @@ public interface UsersMapper extends BaseMapper<Users> {
     @Select("select * from sys_users t where t.phone=#{phone}")
     Users getUserByPhone(String phone);
     @Select("select count(*) from sys_users t")
+
     Long countAllUsers();
+
+    @Select("select count(*) from sys_users t where t.username like '%${username}%'")
+    Long getCountByFuzzyUsername(@Param("username")String username);
+
+    @Select("select * from sys_users t where t.username like '%${username}%' limit #{offset},#{limit}")
+    List<Users> getByFuzzyUsernameByPage(@Param("username")String username,@Param("offset")Integer offset, @Param("limit")Integer limit);
 }

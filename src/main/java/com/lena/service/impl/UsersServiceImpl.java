@@ -2,6 +2,8 @@ package com.lena.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lena.base.result.Myresult;
 import com.lena.base.result.Results;
 import com.lena.dao.RoleMapper;
@@ -18,6 +20,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collector;
 
 /**
  * <p>
@@ -95,5 +100,21 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, Users> implements
 
         int id1 = userRoleMapper.delete(new QueryWrapper<UserRole>().eq("userid", id));
         return usersMapper.deleteById(id);
+    }
+
+
+    @Override
+    public Results<Users> getByFuzzyUsername(String username, Integer offset, Integer limit) {
+        QueryWrapper<Users> usersQueryWrapper = new QueryWrapper<>();
+        usersQueryWrapper.like("username",username);
+        usersMapper.selectCount(usersQueryWrapper);
+
+        Page<Users> page=new Page<>(offset,limit);
+
+        IPage<Users> usersIPage = usersMapper.selectPage(page, usersQueryWrapper);
+        Long total = usersIPage.getTotal();
+        List<Users> records = usersIPage.getRecords();
+
+        return Results.success(total.intValue(),records);
     }
 }

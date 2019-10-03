@@ -37,6 +37,15 @@ import java.util.Date;
 public class UsersController {
     @Autowired
     private UsersService usersService;
+
+    @GetMapping("/findByFuzzyUsername")
+    @ResponseBody
+    public Results<Users> findByFuzzyUsername(PageTableRequest page,String username){
+        page.countOffset();
+
+        return usersService.getByFuzzyUsername(username,page.getOffset(),page.getLimit());
+    }
+
     @GetMapping("/list")
     @ResponseBody
     public Results<Users> getUsers(PageTableRequest page){

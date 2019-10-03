@@ -10,6 +10,7 @@ import com.lena.entity.Users;
 import com.lena.service.RoleService;
 import com.lena.service.UserRoleService;
 import com.lena.service.UsersService;
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,16 +30,23 @@ public class Securitydemo930ApplicationTests {
 	@Autowired
 	private  UserRoleMapper userRoleMapper;
 
+	@Autowired
+	private UsersMapper usersMapper;
+
 
 
 	@Test
 	public void contextLoads() {
-		UserRole ur = userRoleService.getOne(new QueryWrapper<UserRole>().eq("userid", 18));
-		System.out.println(ur.getRoleid());
-		System.out.println("-----------");
-		UserRole userRole = userRoleMapper.selectOne(new QueryWrapper<UserRole>().eq("userid", 18));
-		System.out.println(userRole.getRoleid());
-		System.out.println("---0000000000---");
+		System.out.println(usersMapper.getCountByFuzzyUsername(null                                                                                                                    ));
+		usersMapper.getByFuzzyUsernameByPage(null,1,3).forEach(u-> System.out.println(u.getUsername()));
+//		UserRole ur = userRoleService.getOne(new QueryWrapper<UserRole>().eq("userid", 18));
+//		System.out.println(ur.getRoleid());
+//		System.out.println("-----------");
+//		UserRole userRole = userRoleMapper.selectOne(new QueryWrapper<UserRole>().eq("userid", 18));
+//		System.out.println(userRole.getRoleid());
+//		System.out.println("---0000000000---");
+
+
 	}
 
 }

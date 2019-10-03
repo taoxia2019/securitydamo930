@@ -28,4 +28,6 @@ public interface UsersService extends IService<Users> {
     Users getUserByPhone(String phone);
 
     int deleteUserByid(Integer id);
+
+    Results<Users> getByFuzzyUsername(String username, Integer offset, Integer limit);
 }
