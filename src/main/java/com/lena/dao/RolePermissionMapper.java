@@ -23,4 +23,6 @@ public interface RolePermissionMapper extends BaseMapper<RolePermission> {
 
     @Select("select permissionid from sys_role_permission where roleid=#{roleid}")
     List<Integer> queryRolePermissionIdsByRid(@Param("roleid")Integer roleid);
+
+
 }

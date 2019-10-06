@@ -103,7 +103,6 @@
             $.each(permissionData,function(index,item){
                 ids.push(item.nodeId);
             });
-            alert(ids)
             return ids;
 
         }
@@ -112,7 +111,7 @@
         form.on('submit(add)', function (data) {
             var permisssionIds = getCheckedMenuIds();
             data.field.permissionIds=permisssionIds;
-            alert(permisssionIds)
+
             $.ajax({
                 url: "/role/add",
                 type: "POST",

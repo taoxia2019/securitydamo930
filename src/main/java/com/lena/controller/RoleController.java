@@ -7,12 +7,17 @@ import com.lena.base.result.Results;
 import com.lena.dto.RoleDTO;
 import com.lena.entity.Role;
 
+import com.lena.service.RolePermissionService;
 import com.lena.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
+
+import javax.xml.transform.Result;
+import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * <p>
@@ -28,6 +33,9 @@ public class RoleController {
 
     @Autowired
     private RoleService roleService;
+
+    @Autowired
+    private RolePermissionService rolePermissionService;
 
     @ResponseBody
     @RequestMapping("/all")
@@ -61,6 +69,8 @@ public class RoleController {
     @PostMapping("/add")
     @ResponseBody
     public Results<Role> saveRole(@RequestBody RoleDTO roleDTO){
+        roleDTO.setCreatetime(LocalDateTime.now());
+        roleDTO.setUpdatetime(LocalDateTime.now());
 
         return roleService.saveRole(roleDTO);
     }
@@ -75,21 +85,18 @@ public class RoleController {
 
     @PostMapping("/edit")
     @ResponseBody
-    public Results<Role> updateRole(RoleDTO roleDTO,Integer roleid){
+    public Results<Role> updateRole(@RequestBody RoleDTO roleDTO){
+        roleService.updateRole(roleDTO);
 
-        return roleService.updateRole(roleDTO,roleid);
+        return Results.success();
     }
 
     //删除
     @GetMapping("/delete")
     @ResponseBody
-    public Results deleteUser(Role role){
-        int count = roleService.deleteRoleByid(role.getId());
-        if(count>0){
-            return Results.success();
-        }else {
-            return Results.failure();
-        }
+    public Results deleteUser(RoleDTO roleDTO){
+        return roleService.delete(roleDTO.getId());
+
     }
 
 

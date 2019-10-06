@@ -51,7 +51,7 @@
 
 
         <div class="layui-form-item">
-            <button class="layui-btn" lay-filter="edit" lay-submit="">修改</button>
+            <button class="layui-btn" lay-filter="update" lay-submit="">修改</button>
         </div>
     </form>
 </div>
@@ -104,16 +104,15 @@
             $.each(permissionData,function(index,item){
                 ids.push(item.nodeId);
             });
-            alert(ids)
             return ids;
 
         }
 
         //监听提交
-        form.on('submit(add)', function (data) {
+        form.on('submit(update)', function (data) {
             var permisssionIds = getCheckedMenuIds();
             data.field.permissionIds=permisssionIds;
-            alert(permisssionIds)
+
             $.ajax({
                 url: "/role/edit",
                 type: "POST",
@@ -121,7 +120,7 @@
                 data: JSON.stringify(data.field),
                 dataType: 'json',
                 success: function (result) {
-                        layer.alert("添加成功", {icon: 6}, function () {
+                        layer.alert("更新成功", {icon: 6}, function () {
                             //关闭当前frame
                             xadmin.close();
                             //可以对父窗口进行刷新

@@ -23,9 +23,11 @@ public interface RoleService extends IService<Role> {
 
     Results<Role> findByFuzzyRoleName(String rolename, Integer offset, Integer limit);
 
-    int deleteRoleByid(Integer id);
 
-    Results<Role> updateRole(RoleDTO roleDTO, Integer roleid);
+
+    int updateRole(RoleDTO roleDTO);
 
     Results<Role> saveRole(RoleDTO roleDTO);
+
+    Results delete(Integer id);
 }

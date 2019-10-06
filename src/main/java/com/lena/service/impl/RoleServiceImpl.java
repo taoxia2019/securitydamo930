@@ -1,14 +1,17 @@
 package com.lena.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lena.base.result.Results;
 import com.lena.dao.RolePermissionMapper;
+import com.lena.dao.UserRoleMapper;
 import com.lena.dto.RoleDTO;
 import com.lena.entity.Role;
 import com.lena.dao.RoleMapper;
 import com.lena.entity.RolePermission;
+import com.lena.entity.UserRole;
 import com.lena.service.RoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +35,10 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
     private RoleMapper roleMapper;
 
     @Autowired
-    private RolePermissionMapper rolePermissionMapper;
+    private UserRoleMapper userRoleMapper;
 
+    @Autowired
+    private RolePermissionMapper rolePermissionMapper;
 
 
     @Override
@@ -62,40 +67,63 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
 
     }
 
+
     @Override
-    public int deleteRoleByid(Integer id) {
-        //int id1 = userRoleMapper.delete(new QueryWrapper<UserRole>().eq("userid", id));
-        return roleMapper.deleteById(id);
+    public int updateRole(RoleDTO roleDTO) {
+        List<Integer> permissionIds = roleDTO.getPermissionIds();
+        //更新角色权限前要删除之前的全部权限
+        QueryWrapper<RolePermission> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("roleid", roleDTO.getId());
+        rolePermissionMapper.delete(queryWrapper);
+        //判断是否赋予了该角色权限，如果有就添加
+        if (!CollectionUtils.isEmpty(permissionIds)) {
+            saveRolePermission(roleDTO, permissionIds);
+        }
+
+        return roleMapper.update(roleDTO, new UpdateWrapper<Role>().eq("id", roleDTO.getId()));
     }
 
-    @Override
-    public Results<Role> updateRole(RoleDTO roleDTO, Integer roleid) {
+    private void saveRolePermission(RoleDTO roleDTO, List<Integer> permissionIds) {
 
-        return null;
+        permissionIds.forEach(l -> {
+            RolePermission rolePermission = new RolePermission();
+            rolePermission.setRoleid(roleDTO.getId());
+            rolePermission.setPermissionid(l);
+            rolePermissionMapper.insert(rolePermission);
+        });
+
     }
 
     @Override
     public Results<Role> saveRole(RoleDTO roleDTO) {
         // 1.save role
         roleMapper.insert(roleDTO);
-
         List<Integer> permissionIds = roleDTO.getPermissionIds();
-
-        //permissionIds.remove(0L);
-
         //2.save permission
         if (!CollectionUtils.isEmpty(permissionIds)) {
-           //rolePermissionMapper.save(roleDTO.getId(),permissionIds);
-            permissionIds.forEach(l->{
-                RolePermission rolePermission = new RolePermission();
-                rolePermission.setRoleid(roleDTO.getId());
-                rolePermission.setPermissionid(l);
-
-                rolePermissionMapper.insert(rolePermission);
-            });
+            saveRolePermission(roleDTO, permissionIds);
         }
+        return Results.success();
+    }
 
-
+    @Override
+    public Results delete(Integer id) {
+        //删除role_permission中的数据
+        QueryWrapper<RolePermission> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("roleid", id);
+        List<RolePermission> rolePermissions = rolePermissionMapper.selectList(queryWrapper);
+        if(rolePermissions.size()>0) {
+            rolePermissionMapper.delete(queryWrapper);
+        }
+        //删除user_role中的数据
+        QueryWrapper<UserRole> queryWrapper1 = new QueryWrapper<>();
+        queryWrapper1.eq("roleid", id);
+        List<UserRole> userRoles = userRoleMapper.selectList(queryWrapper1);
+        if(userRoles.size()>0) {
+            userRoleMapper.delete(queryWrapper1);
+        }
+        //删除role中的数据
+        roleMapper.deleteById(id);
         return Results.success();
     }
 }
