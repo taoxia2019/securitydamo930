@@ -24,14 +24,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class MysqlGenerator {
     private static String author ="taoxia";//作者名称
-    private static String outputDir ="d:\\java1";//生成的位置
+    private static String outputDir ="d:\\java2";//生成的位置
     private static String driver ="com.mysql.cj.jdbc.Driver";//驱动，注意mysql版本,此为8.0以上版本
     //连接路径, 注意修改数据库名称
     private static String url ="jdbc:mysql://localhost:3306/securitydemo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
     private static String username ="root";//数据库用户名
-    private static String password ="root";//数据库密码
+    private static String password ="1234";//数据库密码
     private static String tablePrefix ="sys";//数据库表的前缀，如tbl_user
-    private static String [] tables = {"sys_users"};	//生成的表
+    private static String [] tables = {"sys_role_permission","sys_permission"};	//生成的表
     private static String parentPackage = "com.lena";//顶级包结构
     private static String dao = "dao";//数据访问层包名称
     private static String service = "service";//业务逻辑层包名称

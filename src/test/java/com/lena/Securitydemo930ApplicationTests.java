@@ -1,21 +1,22 @@
 package com.lena;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lena.dao.RoleMapper;
+import com.lena.dao.RolePermissionMapper;
 import com.lena.dao.UserRoleMapper;
 import com.lena.dao.UsersMapper;
-import com.lena.entity.UserRole;
-import com.lena.entity.Users;
+import com.lena.dto.RoleDTO;
+import com.lena.entity.RolePermission;
 import com.lena.service.RoleService;
 import com.lena.service.UserRoleService;
-import com.lena.service.UsersService;
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -34,17 +35,35 @@ public class Securitydemo930ApplicationTests {
 	private UsersMapper usersMapper;
 
 
+	@Autowired
+	private RolePermissionMapper rolePermissionMapper;
+
+
+
+
 
 	@Test
 	public void contextLoads() {
-		System.out.println(usersMapper.getCountByFuzzyUsername(null                                                                                                                    ));
-		usersMapper.getByFuzzyUsernameByPage(null,1,3).forEach(u-> System.out.println(u.getUsername()));
-//		UserRole ur = userRoleService.getOne(new QueryWrapper<UserRole>().eq("userid", 18));
-//		System.out.println(ur.getRoleid());
-//		System.out.println("-----------");
-//		UserRole userRole = userRoleMapper.selectOne(new QueryWrapper<UserRole>().eq("userid", 18));
-//		System.out.println(userRole.getRoleid());
-//		System.out.println("---0000000000---");
+
+		RoleDTO roleDTO = new RoleDTO();
+		roleDTO.setId(1);
+
+		List<Integer> permissionIds=new ArrayList<>();
+		for(int i=1;i<26;i++){
+			permissionIds.add(i);
+		}
+
+
+		permissionIds.forEach(l->{
+			RolePermission rolePermission = new RolePermission();
+			rolePermission.setRoleid(roleDTO.getId());
+			rolePermission.setPermissionid(l);
+
+			rolePermissionMapper.insert(rolePermission);
+		});
+
+		//rolePermissionMapper.save(1,permissionIds);
+
 
 
 	}

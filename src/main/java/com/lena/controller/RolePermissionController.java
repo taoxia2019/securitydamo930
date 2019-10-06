@@ -11,11 +11,11 @@ import org.springframework.stereotype.Controller;
  * </p>
  *
  * @author taoxia
- * @since 2019-09-30
+ * @since 2019-10-04
  */
 @Controller
-@RequestMapping("/pemission")
-public class PemissionController {
+@RequestMapping("/rolePermission")
+public class RolePermissionController {
 
 }
 

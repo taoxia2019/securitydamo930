@@ -3,6 +3,8 @@ package com.lena.entity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 
 /**
@@ -11,18 +13,21 @@ import java.io.Serializable;
  * </p>
  *
  * @author taoxia
- * @since 2019-09-30
+ * @since 2019-10-04
  */
-@TableName("sys_pemission")
-public class Pemission implements Serializable {
+@TableName("sys_permission")
+public class Permission implements Serializable {
 
 private static final long serialVersionUID=1L;
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
+
+    @JsonProperty("parentId")
     private Integer parentid;
 
+    @JsonProperty("title")
     private String name;
 
     private String css;
@@ -31,7 +36,7 @@ private static final long serialVersionUID=1L;
 
     private Integer type;
 
-    private String pemission;
+    private String permission;
 
     private Integer sort;
 
@@ -84,12 +89,12 @@ private static final long serialVersionUID=1L;
         this.type = type;
     }
 
-    public String getPemission() {
-        return pemission;
+    public String getPermission() {
+        return permission;
     }
 
-    public void setPemission(String pemission) {
-        this.pemission = pemission;
+    public void setPermission(String permission) {
+        this.permission = permission;
     }
 
     public Integer getSort() {
@@ -102,14 +107,14 @@ private static final long serialVersionUID=1L;
 
     @Override
     public String toString() {
-        return "Pemission{" +
+        return "Permission{" +
         "id=" + id +
         ", parentid=" + parentid +
         ", name=" + name +
         ", css=" + css +
         ", href=" + href +
         ", type=" + type +
-        ", pemission=" + pemission +
+        ", permission=" + permission +
         ", sort=" + sort +
         "}";
     }
