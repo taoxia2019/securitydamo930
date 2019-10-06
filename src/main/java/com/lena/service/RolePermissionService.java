@@ -3,6 +3,8 @@ package com.lena.service;
 import com.lena.entity.RolePermission;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -12,5 +14,12 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2019-10-04
  */
 public interface RolePermissionService extends IService<RolePermission> {
+
+    /**
+     * 根据角色ID查询当前角色拥有的所有的权限或菜单ID
+     * @param roleid
+     * @return
+     */
+    List<Integer> queryRolePermissionIdsByRid(Integer roleid);
 
 }

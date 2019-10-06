@@ -3,6 +3,7 @@ package com.lena.dao;
 import com.lena.entity.RolePermission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,4 +20,7 @@ import java.util.List;
 public interface RolePermissionMapper extends BaseMapper<RolePermission> {
 
     int save(@Param("roleid")Integer id, @Param("permissionIds")List<Integer> permissionIds);
+
+    @Select("select permissionid from sys_role_permission where roleid=#{roleid}")
+    List<Integer> queryRolePermissionIdsByRid(@Param("roleid")Integer roleid);
 }

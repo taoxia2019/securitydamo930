@@ -44,26 +44,8 @@ public class Securitydemo930ApplicationTests {
 
 	@Test
 	public void contextLoads() {
-
-		RoleDTO roleDTO = new RoleDTO();
-		roleDTO.setId(1);
-
-		List<Integer> permissionIds=new ArrayList<>();
-		for(int i=1;i<26;i++){
-			permissionIds.add(i);
-		}
-
-
-		permissionIds.forEach(l->{
-			RolePermission rolePermission = new RolePermission();
-			rolePermission.setRoleid(roleDTO.getId());
-			rolePermission.setPermissionid(l);
-
-			rolePermissionMapper.insert(rolePermission);
-		});
-
-		//rolePermissionMapper.save(1,permissionIds);
-
+		List<Integer> integers = rolePermissionMapper.queryRolePermissionIdsByRid(1);
+		integers.forEach(i-> System.out.println(i));
 
 
 	}

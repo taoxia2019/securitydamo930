@@ -61,9 +61,7 @@ public class RoleController {
     @PostMapping("/add")
     @ResponseBody
     public Results<Role> saveRole(@RequestBody RoleDTO roleDTO){
-        System.out.println("1111111111");
-        System.out.println(roleDTO.getPermissionIds()+"--"+roleDTO.getName()+"--"+roleDTO.getDescirption());
-        System.out.println("222222222");
+
         return roleService.saveRole(roleDTO);
     }
 

@@ -81,7 +81,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
 
         List<Integer> permissionIds = roleDTO.getPermissionIds();
 
-        permissionIds.remove(0L);
+        //permissionIds.remove(0L);
 
         //2.save permission
         if (!CollectionUtils.isEmpty(permissionIds)) {

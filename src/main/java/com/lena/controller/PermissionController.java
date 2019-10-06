@@ -2,11 +2,14 @@ package com.lena.controller;
 
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lena.base.DataGridView;
 import com.lena.base.TreeNode;
 
 import com.lena.entity.Permission;
+
 import com.lena.service.PermissionService;
+import com.lena.service.RolePermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +32,8 @@ public class PermissionController {
     @Autowired
     private PermissionService permissionService;
 
+    @Autowired
+    private RolePermissionService rolePermissionService;
 
     @RequestMapping("/listAllPermission")
     @ResponseBody
@@ -40,6 +45,44 @@ public class PermissionController {
         for (Permission p1 : list) {
             String checkArr="0";
             Boolean spread= true;
+            nodes.add(new TreeNode(p1.getId(), p1.getParentid(), p1.getName(), spread, checkArr));
+        }
+        return new DataGridView(nodes);
+    }
+
+
+    @RequestMapping("/initPermissionByRoleId")
+    @ResponseBody
+    public DataGridView initPermissionByRoleId(Integer roleid) {
+
+        System.out.println("角色ID"+roleid);
+
+        //查询所有可用的菜单和权限
+        List<Permission> allPermissions = permissionService.list();
+        /**
+         * 1,根据角色ID查询当前角色拥有的所有的权限或菜单ID
+         * 2,根据查询出来的菜单ID查询权限和菜单数据
+         */
+        List<Integer> currentRolePermissions=this.rolePermissionService.queryRolePermissionIdsByRid(roleid);
+        List<Permission> carrentPermissions=null;
+        if(currentRolePermissions.size()>0) { //如果有ID就去查询
+            QueryWrapper<Permission> queryWrapper=new QueryWrapper<>();
+            queryWrapper.in("id", currentRolePermissions);
+            carrentPermissions = permissionService.list(queryWrapper);
+        }else {
+            carrentPermissions=new ArrayList<>();
+        }
+        //构造 List<TreeNode>
+        List<TreeNode> nodes=new ArrayList<>();
+        for (Permission p1 : allPermissions) {
+            String checkArr="0";
+            for (Permission p2 : carrentPermissions) {
+                if(p1.getId()==p2.getId()) {
+                    checkArr="1";
+                    break;
+                }
+            }
+            Boolean spread=true;
             nodes.add(new TreeNode(p1.getId(), p1.getParentid(), p1.getName(), spread, checkArr));
         }
         return new DataGridView(nodes);

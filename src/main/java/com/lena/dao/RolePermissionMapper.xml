@@ -21,4 +21,9 @@
 
     </insert>
 
+    <!-- 根据角色ID查询当前角色拥有的所有的权限或菜单ID -->
+    <!--<select id="queryRolePermissionIdsByRid" resultType="java.lang.Integer">
+        select permissionid from sys_role_permission where roleid=#{value}
+    </select>-->
+
 </mapper>

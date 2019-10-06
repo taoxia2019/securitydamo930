@@ -4,7 +4,10 @@ import com.lena.entity.RolePermission;
 import com.lena.dao.RolePermissionMapper;
 import com.lena.service.RolePermissionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * <p>
@@ -17,4 +20,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class RolePermissionServiceImpl extends ServiceImpl<RolePermissionMapper, RolePermission> implements RolePermissionService {
 
+    @Autowired
+    private RolePermissionMapper rolePermissionMapper;
+    @Override
+    public List<Integer> queryRolePermissionIdsByRid(Integer roleid) {
+        return rolePermissionMapper.queryRolePermissionIdsByRid(roleid);
+    }
 }
