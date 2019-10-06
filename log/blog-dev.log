@@ -2493,3 +2493,102 @@ java.sql.SQLSyntaxErrorException: Unknown column 'role' in 'where clause'
 2019-10-06 16:16:40.995 DEBUG 7300 --- [http-nio-8080-exec-2] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
 2019-10-06 16:16:40.996 DEBUG 7300 --- [http-nio-8080-exec-2] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
 2019-10-06 16:16:41.004 DEBUG 7300 --- [http-nio-8080-exec-2] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 9
+2019-10-06 22:15:55.019  INFO 10184 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 10184 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-06 22:15:55.022 DEBUG 10184 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-06 22:15:55.022  INFO 10184 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-06 22:15:56.640  INFO 10184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-06 22:15:56.666  INFO 10184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-06 22:15:56.666  INFO 10184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-06 22:15:56.912  INFO 10184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-06 22:15:56.913  INFO 10184 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1827 ms
+2019-10-06 22:15:57.147  INFO 10184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-06 22:15:57.368  INFO 10184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-06 22:15:57.711  WARN 10184 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-06 22:15:57.819  WARN 10184 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-06 22:15:59.247  INFO 10184 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-06 22:15:59.414  INFO 10184 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-06 22:15:59.867  INFO 10184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-06 22:15:59.887  INFO 10184 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 5.674 seconds (JVM running for 7.495)
+2019-10-06 22:16:08.427  INFO 10184 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570348446] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-06 22:16:08.440  INFO 10184 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-06 22:16:08.440  INFO 10184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-06 22:16:08.450  INFO 10184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-10-06 22:16:09.431 DEBUG 10184 --- [http-nio-8080-exec-3] com.lena.dao.RoleMapper.countAllRoles    : ==>  Preparing: select count(*) from sys_role t 
+2019-10-06 22:16:09.435 DEBUG 10184 --- [http-nio-8080-exec-4] com.lena.dao.UsersMapper.countAllUsers   : ==>  Preparing: select count(*) from sys_users t 
+2019-10-06 22:16:09.468 DEBUG 10184 --- [http-nio-8080-exec-3] com.lena.dao.RoleMapper.countAllRoles    : ==> Parameters: 
+2019-10-06 22:16:09.468 DEBUG 10184 --- [http-nio-8080-exec-4] com.lena.dao.UsersMapper.countAllUsers   : ==> Parameters: 
+2019-10-06 22:16:09.499 DEBUG 10184 --- [http-nio-8080-exec-4] com.lena.dao.UsersMapper.countAllUsers   : <==      Total: 1
+2019-10-06 22:16:09.499 DEBUG 10184 --- [http-nio-8080-exec-3] com.lena.dao.RoleMapper.countAllRoles    : <==      Total: 1
+2019-10-06 22:16:09.502 DEBUG 10184 --- [http-nio-8080-exec-4] c.l.dao.UsersMapper.getallUsersByPage    : ==>  Preparing: select * from sys_users t order by t.id limit ?,? 
+2019-10-06 22:16:09.502 DEBUG 10184 --- [http-nio-8080-exec-3] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
+2019-10-06 22:16:09.503 DEBUG 10184 --- [http-nio-8080-exec-4] c.l.dao.UsersMapper.getallUsersByPage    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-06 22:16:09.503 DEBUG 10184 --- [http-nio-8080-exec-3] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-06 22:16:09.510 DEBUG 10184 --- [http-nio-8080-exec-4] c.l.dao.UsersMapper.getallUsersByPage    : <==      Total: 10
+2019-10-06 22:16:09.510 DEBUG 10184 --- [http-nio-8080-exec-3] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 9
+2019-10-06 23:29:39.360  INFO 1680 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 1680 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-06 23:29:39.363 DEBUG 1680 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-06 23:29:39.363  INFO 1680 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-06 23:29:40.728  INFO 1680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-06 23:29:40.753  INFO 1680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-06 23:29:40.753  INFO 1680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-06 23:29:41.059  INFO 1680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-06 23:29:41.059  INFO 1680 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1637 ms
+2019-10-06 23:29:41.786  INFO 1680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-06 23:29:41.946  INFO 1680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-06 23:29:42.243  WARN 1680 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-06 23:29:42.326  WARN 1680 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-06 23:29:42.605  INFO 1680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-06 23:29:42.689  INFO 1680 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-06 23:29:42.944  INFO 1680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-06 23:29:42.947  INFO 1680 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 4.294 seconds (JVM running for 5.828)
+2019-10-06 23:29:51.052  INFO 1680 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570371369] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-06 23:29:51.052  INFO 1680 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-06 23:29:51.052  INFO 1680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-06 23:29:51.070  INFO 1680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-10-06 23:29:52.042 DEBUG 1680 --- [http-nio-8080-exec-1] com.lena.dao.RoleMapper.countAllRoles    : ==>  Preparing: select count(*) from sys_role t 
+2019-10-06 23:29:52.043 DEBUG 1680 --- [http-nio-8080-exec-10] com.lena.dao.UsersMapper.countAllUsers   : ==>  Preparing: select count(*) from sys_users t 
+2019-10-06 23:29:52.085 DEBUG 1680 --- [http-nio-8080-exec-10] com.lena.dao.UsersMapper.countAllUsers   : ==> Parameters: 
+2019-10-06 23:29:52.085 DEBUG 1680 --- [http-nio-8080-exec-1] com.lena.dao.RoleMapper.countAllRoles    : ==> Parameters: 
+2019-10-06 23:29:52.116 DEBUG 1680 --- [http-nio-8080-exec-1] com.lena.dao.RoleMapper.countAllRoles    : <==      Total: 1
+2019-10-06 23:29:52.116 DEBUG 1680 --- [http-nio-8080-exec-10] com.lena.dao.UsersMapper.countAllUsers   : <==      Total: 1
+2019-10-06 23:29:52.119 DEBUG 1680 --- [http-nio-8080-exec-10] c.l.dao.UsersMapper.getallUsersByPage    : ==>  Preparing: select * from sys_users t order by t.id limit ?,? 
+2019-10-06 23:29:52.119 DEBUG 1680 --- [http-nio-8080-exec-1] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
+2019-10-06 23:29:52.120 DEBUG 1680 --- [http-nio-8080-exec-10] c.l.dao.UsersMapper.getallUsersByPage    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-06 23:29:52.120 DEBUG 1680 --- [http-nio-8080-exec-1] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-06 23:29:52.132 DEBUG 1680 --- [http-nio-8080-exec-1] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 9
+2019-10-06 23:29:52.132 DEBUG 1680 --- [http-nio-8080-exec-10] c.l.dao.UsersMapper.getallUsersByPage    : <==      Total: 10
+2019-10-06 23:38:43.960  INFO 14936 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 14936 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-06 23:38:43.960 DEBUG 14936 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-06 23:38:43.960  INFO 14936 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-06 23:38:45.274  INFO 14936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-06 23:38:45.308  INFO 14936 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-06 23:38:45.308  INFO 14936 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-06 23:38:45.451  INFO 14936 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-06 23:38:45.467  INFO 14936 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1428 ms
+2019-10-06 23:38:45.624  INFO 14936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-06 23:38:45.755  INFO 14936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-06 23:38:45.948  WARN 14936 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-06 23:38:46.026  WARN 14936 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-06 23:38:46.286  INFO 14936 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-06 23:38:46.373  INFO 14936 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-06 23:38:46.563  INFO 14936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-06 23:38:46.563  INFO 14936 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 3.345 seconds (JVM running for 5.133)
+2019-10-06 23:39:22.864  INFO 14936 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570375792] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-06 23:39:22.873  INFO 14936 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-06 23:39:22.874  INFO 14936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-06 23:39:22.883  INFO 14936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-10-06 23:39:23.700 DEBUG 14936 --- [http-nio-8080-exec-3] com.lena.dao.RoleMapper.countAllRoles    : ==>  Preparing: select count(*) from sys_role t 
+2019-10-06 23:39:23.700 DEBUG 14936 --- [http-nio-8080-exec-1] com.lena.dao.UsersMapper.countAllUsers   : ==>  Preparing: select count(*) from sys_users t 
+2019-10-06 23:39:23.744 DEBUG 14936 --- [http-nio-8080-exec-3] com.lena.dao.RoleMapper.countAllRoles    : ==> Parameters: 
+2019-10-06 23:39:23.744 DEBUG 14936 --- [http-nio-8080-exec-1] com.lena.dao.UsersMapper.countAllUsers   : ==> Parameters: 
+2019-10-06 23:39:23.777 DEBUG 14936 --- [http-nio-8080-exec-1] com.lena.dao.UsersMapper.countAllUsers   : <==      Total: 1
+2019-10-06 23:39:23.777 DEBUG 14936 --- [http-nio-8080-exec-3] com.lena.dao.RoleMapper.countAllRoles    : <==      Total: 1
+2019-10-06 23:39:23.782 DEBUG 14936 --- [http-nio-8080-exec-3] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
+2019-10-06 23:39:23.782 DEBUG 14936 --- [http-nio-8080-exec-1] c.l.dao.UsersMapper.getallUsersByPage    : ==>  Preparing: select * from sys_users t order by t.id limit ?,? 
+2019-10-06 23:39:23.782 DEBUG 14936 --- [http-nio-8080-exec-3] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-06 23:39:23.782 DEBUG 14936 --- [http-nio-8080-exec-1] c.l.dao.UsersMapper.getallUsersByPage    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-06 23:39:23.789 DEBUG 14936 --- [http-nio-8080-exec-3] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 9
+2019-10-06 23:39:23.789 DEBUG 14936 --- [http-nio-8080-exec-1] c.l.dao.UsersMapper.getallUsersByPage    : <==      Total: 10

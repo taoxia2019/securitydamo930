@@ -36,4 +36,21 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
 
         return Results.success(integer,datas);
     }
+
+    @Override
+    public Results<Permission> getMenuAll() {
+        return Results.success(0,permissionMapper.selectList(null));
+    }
+
+    @Override
+    public Results<Permission> savePermission(Permission permission) {
+        int i = permissionMapper.insert(permission);
+        return i>0?Results.success():Results.failure();
+    }
+
+    @Override
+    public Results<Permission> editPermission(Permission permission) {
+        int i = permissionMapper.updateById(permission);
+        return i>0?Results.success():Results.failure();
+    }
 }

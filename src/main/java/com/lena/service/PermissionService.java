@@ -16,4 +16,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface PermissionService extends IService<Permission> {
 
     Results<Permission> listAllPermission();
+
+    Results<Permission> getMenuAll();
+
+    Results<Permission> savePermission(Permission permission);
+
+    Results<Permission> editPermission(Permission permission);
 }

@@ -6,11 +6,13 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lena.base.DataGridView;
 import com.lena.base.TreeNode;
 
+import com.lena.base.result.Results;
 import com.lena.entity.Permission;
 
 import com.lena.service.PermissionService;
 import com.lena.service.RolePermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
@@ -34,6 +36,37 @@ public class PermissionController {
 
     @Autowired
     private RolePermissionService rolePermissionService;
+
+    @RequestMapping(value = "/add",method = RequestMethod.GET)
+    public String addPermission(Model model){
+        model.addAttribute("permission",new Permission());
+        return "permission/permission-add";
+    }
+
+    @RequestMapping(value = "/add",method=RequestMethod.POST)
+    @ResponseBody
+    public Results<Permission> savePermission(@RequestBody Permission permission){
+        return permissionService.savePermission(permission);
+    }
+
+
+    @RequestMapping(value = "/edit",method = RequestMethod.GET)
+    public String editPermission(Model model,Permission permission){
+        model.addAttribute("permission",permissionService.getById(permission.getId()));
+        return "permission/permission-edit";
+    }
+
+    @RequestMapping(value = "/edit",method=RequestMethod.POST)
+    @ResponseBody
+    public Results<Permission> editPermission(@RequestBody Permission permission){
+        return permissionService.editPermission(permission);
+    }
+
+    @GetMapping("/menuAll")
+    @ResponseBody
+    public Results getMenuAll(){
+        return permissionService.getMenuAll();
+    }
 
     @RequestMapping("/listAllPermission")
     @ResponseBody
