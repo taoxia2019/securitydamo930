@@ -15,13 +15,13 @@
 
     <form class="layui-form">
         <div class="layui-form-item">
-            <input type="text" id="id" th:value="${permission.id}" name="id" autocomplete="off" class="">
-            <label for="L_name" class="layui-form-label">
+            <input id="id" th:value="${permission.id}" name="id" autocomplete="off" type="hidden">
+            <label for="L_title" class="layui-form-label">
                 <span class="x-red">*</span>菜单名
             </label>
             <div class="layui-input-inline">
-                <input type="text" id="L_name" th:value="${permission.name}" name="name" required=""
-                       lay-verify="name"
+                <input type="text" id="L_title" th:value="${permission.name}" name="title" required=""
+                       lay-verify="title"
                        autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">
@@ -90,30 +90,31 @@
         </div>
 
         <div class="layui-form-item">
-            <label class="col-md-2 control-label layui-form-label">上级菜单</label>
-            <div class="col-md-10">
-                <input type="text" id="parentid" th:value="${permission.parentid}" name="parentid"
-                       lay-verify="parentid"
-                       autocomplete="off" class="layui-input">
-                <ul id="permissionTree" class="dtree" data-id="0"></ul>
-
+            <label class="layui-form-label">上级菜单</label>
+            <div class="layui-input-block">
+                <div class="layui-unselect layui-form-select" id="parentId">
+                    <div class="layui-select-title">
+                        <input type="text" name="parentId" id="input_parentId" placeholder="请选择" readonly=""
+                               class="layui-input layui-unselect">
+                        <i class="layui-edge"></i>
+                    </div>
+                </div>
+                <div class="layui-card select-test" id="test">
+                    <div class="layui-card-body">
+                        <div id="toolbarDiv">
+                            <ul id="slTree" class="dtree" data-id="0" style="width: 100%;"></ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-
-        <!--<div class="layui-form-item">-->
-            <!--<div class="col-md-10">-->
-                <!--<ul id="permissionTree" class="dtree" data-id="0"></ul>-->
-            <!--</div>-->
-        <!--</div>-->
-
-
         <div class="layui-form-item">
             <button class="layui-btn" lay-filter="add" lay-submit="">保存</button>
         </div>
     </form>
+
 </div>
-</div>
+
 <script>
     layui.extend({
         dtree: '/dtree/dtree'
@@ -131,7 +132,7 @@
         //    });
         //自定义验证规则
         form.verify({
-            name: function (value) {
+            title: function (value) {
                 if (value.length < 2) {
                     return '菜单名至少得2个字符';
                 }
@@ -144,51 +145,47 @@
         });
 
         // 初始化树
-        dtree.render({
-            elem: "#permissionTree",
+        var DTree = dtree.render({
+            elem: "#slTree",
             url: "/permission/listAllPermission",
             dataStyle: "layuiStyle",  //使用layui风格的数据格式
             dataFormat: "list",  //配置data的风格为list
-            response: {message: "msg", statusCode: 0},  //修改response中返回数据的定义
-            checkbar: true,
-            checkbarType: "all" // 默认就是all，其他的值为： no-all  p-casc   self  only
+            response: {message: "msg", statusCode: 0},
+            icon: "2",
+            accordion: true
+        });
+        $("#parentid").on("click", function () {
+            $(this).toggleClass("layui-form-selected");
+            $("#test").toggleClass("layui-show layui-anim layui-anim-upbit");
+        });
+        dtree.on("node(slTree)", function (obj) {
+            $("#input_parentId").val(obj.param.nodeId);
+            $("#parentId").toggleClass("layui-form-selected");
+            $("#test").toggleClass("layui-show layui-anim layui-anim-upbit");
         });
 
-        // 绑定节点点击
-        dtree.on("node('permissionTree')", function (obj) {
-            layer.msg(JSON.stringify(obj.param));
 
-        });
-        function getCheckedMenuIds() {
-            var permissionData = dtree.getCheckbarNodesParam("permissionTree");
-
-            var ids=[];
-            $.each(permissionData,function(index,item){
-                ids.push(item.nodeId);
-            });
-            return ids;
-
-        }
-
-        //监听提交
+        ///监听提交
         form.on('submit(add)', function (data) {
-            var permisssionIds = getCheckedMenuIds();
-            data.field.permissionIds=permisssionIds;
 
-            if(data.field.sort.length<=0){
+            alert("是否是需要数据：");
+            alert("ceshi1:" +data.field.name+"ceshi2:" + data.field.parentId+"ceshi3:" + JSON.stringify(data.field));
+
+
+            if (data.field.sort.length <= 0) {
                 layer.msg('请填写排序值');
-            }else  if(permisssionIds.length<=0){
+            } else if (data.field.parentId.length <= 0) {
                 layer.msg('请选择对应的上级菜单');
-            }else {
-                data.field.parentid=permisssionIds[0];
-                var isUpdate=false;
-                if(data.field.id&& data.field.id.length>0){
-                    isUpdate=true;
+            } else {
+
+                var isUpdate = false;
+                if (data.field.id && data.field.id.length > 0) {
+                    isUpdate = true;
                 }
                 $.ajax({
-                    url: isUpdate?"permission/edit":"/permission/add",
+                    url: isUpdate ? "permission/edit" : "/permission/add",
                     type: "POST",
-                    contentType:"application/json;charset=utf-8",
+                    contentType: "application/json;charset=utf-8",
                     data: JSON.stringify(data.field),
                     dataType: 'json',
                     success: function (result) {

@@ -50,6 +50,7 @@ public class PermissionController {
     }
 
 
+
     @RequestMapping(value = "/edit",method = RequestMethod.GET)
     public String editPermission(Model model,Permission permission){
         model.addAttribute("permission",permissionService.getById(permission.getId()));
