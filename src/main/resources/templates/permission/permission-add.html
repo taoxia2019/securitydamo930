@@ -168,10 +168,6 @@
         ///监听提交
         form.on('submit(add)', function (data) {
 
-            alert("是否是需要数据：");
-            alert("ceshi1:" +data.field.name+"ceshi2:" + data.field.parentId+"ceshi3:" + JSON.stringify(data.field));
-
-
             if (data.field.sort.length <= 0) {
                 layer.msg('请填写排序值');
             } else if (data.field.parentId.length <= 0) {

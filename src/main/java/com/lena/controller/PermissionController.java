@@ -66,6 +66,12 @@ public class PermissionController {
         return permissionService.editPermission(permission);
     }
 
+    @RequestMapping("/delete")
+    @ResponseBody
+    public Results<Permission> deletePermission(Permission permission){
+        return permissionService.delectPermission(permission.getId());
+    }
+
     @GetMapping("/menuAll")
     @ResponseBody
     public DataGridView getMenuAll(){

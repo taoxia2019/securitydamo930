@@ -23,4 +23,6 @@ public interface PermissionService extends IService<Permission> {
     Results<Permission> savePermission(Permission permission);
 
     Results<Permission> editPermission(Permission permission);
+
+    Results<Permission> delectPermission(Integer id);
 }

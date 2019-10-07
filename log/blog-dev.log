@@ -3156,3 +3156,402 @@ org.attoparser.ParseException: (Line = 18, Column = 97) Malformed markup: Attrib
 2019-10-07 20:27:20.776 DEBUG 15260 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
 2019-10-07 20:27:20.776 DEBUG 15260 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
 2019-10-07 20:27:20.779 DEBUG 15260 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 21:27:12.795  INFO 1044 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 1044 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 21:27:12.801 DEBUG 1044 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 21:27:12.802  INFO 1044 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 21:27:14.344  INFO 1044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 21:27:14.373  INFO 1044 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 21:27:14.373  INFO 1044 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 21:27:14.545  INFO 1044 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 21:27:14.545  INFO 1044 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1681 ms
+2019-10-07 21:27:14.754  INFO 1044 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 21:27:14.912  INFO 1044 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 21:27:15.132  WARN 1044 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 21:27:15.235  WARN 1044 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 21:27:15.551  INFO 1044 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 21:27:15.648  INFO 1044 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 21:27:15.872  INFO 1044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 21:27:15.876  INFO 1044 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 3.901 seconds (JVM running for 5.675)
+2019-10-07 21:28:53.136  INFO 1044 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570451220] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-07 21:28:53.148  INFO 1044 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-07 21:28:53.149  INFO 1044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-07 21:28:53.155  INFO 1044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-10-07 21:28:53.904 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:28:53.935 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:28:53.970 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 21:29:19.517 DEBUG 1044 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : ==>  Preparing: INSERT INTO sys_permission ( parentid, name, css, href, type, permission, sort ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2019-10-07 21:29:19.522 DEBUG 1044 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : ==> Parameters: 27(Integer), 测试8(String), (String), (String), 1(Integer), (String), 100(Integer)
+2019-10-07 21:29:19.541 DEBUG 1044 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : <==    Updates: 1
+2019-10-07 21:29:20.991 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:29:20.991 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:29:20.996 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:29:20.997 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:29:20.998 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:29:21.006 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : <==      Total: 27
+2019-10-07 21:29:36.594 DEBUG 1044 --- [http-nio-8080-exec-9] com.lena.dao.RoleMapper.countAllRoles    : ==>  Preparing: select count(*) from sys_role t 
+2019-10-07 21:29:36.594 DEBUG 1044 --- [http-nio-8080-exec-9] com.lena.dao.RoleMapper.countAllRoles    : ==> Parameters: 
+2019-10-07 21:29:36.595 DEBUG 1044 --- [http-nio-8080-exec-9] com.lena.dao.RoleMapper.countAllRoles    : <==      Total: 1
+2019-10-07 21:29:36.596 DEBUG 1044 --- [http-nio-8080-exec-9] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
+2019-10-07 21:29:36.597 DEBUG 1044 --- [http-nio-8080-exec-9] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 21:29:36.609 DEBUG 1044 --- [http-nio-8080-exec-9] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 10
+2019-10-07 21:29:51.109 DEBUG 1044 --- [http-nio-8080-exec-1] com.lena.dao.RoleMapper.selectById       : ==>  Preparing: SELECT id,name,descirption,createtime,updatetime FROM sys_role WHERE id=? 
+2019-10-07 21:29:51.109 DEBUG 1044 --- [http-nio-8080-exec-1] com.lena.dao.RoleMapper.selectById       : ==> Parameters: 2(Integer)
+2019-10-07 21:29:51.121 DEBUG 1044 --- [http-nio-8080-exec-1] com.lena.dao.RoleMapper.selectById       : <==      Total: 1
+2019-10-07 21:29:51.281 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:29:51.282 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:29:51.288 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : <==      Total: 27
+2019-10-07 21:29:51.294 DEBUG 1044 --- [http-nio-8080-exec-2] c.l.d.R.queryRolePermissionIdsByRid      : ==>  Preparing: select permissionid from sys_role_permission where roleid=? 
+2019-10-07 21:29:51.296 DEBUG 1044 --- [http-nio-8080-exec-2] c.l.d.R.queryRolePermissionIdsByRid      : ==> Parameters: 2(Integer)
+2019-10-07 21:29:51.305 DEBUG 1044 --- [http-nio-8080-exec-2] c.l.d.R.queryRolePermissionIdsByRid      : <==      Total: 0
+2019-10-07 21:30:00.987 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.delete   : ==>  Preparing: DELETE FROM sys_role_permission WHERE roleid = ? 
+2019-10-07 21:30:00.996 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.delete   : ==> Parameters: 2(Integer)
+2019-10-07 21:30:01.000 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.delete   : <==    Updates: 0
+2019-10-07 21:30:01.001 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.insert   : ==>  Preparing: INSERT INTO sys_role_permission ( roleid, permissionid ) VALUES ( ?, ? ) 
+2019-10-07 21:30:01.002 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.insert   : ==> Parameters: 2(Integer), 7(Integer)
+2019-10-07 21:30:01.005 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.insert   : <==    Updates: 1
+2019-10-07 21:30:01.005 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.insert   : ==>  Preparing: INSERT INTO sys_role_permission ( roleid, permissionid ) VALUES ( ?, ? ) 
+2019-10-07 21:30:01.005 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.insert   : ==> Parameters: 2(Integer), 27(Integer)
+2019-10-07 21:30:01.010 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.insert   : <==    Updates: 1
+2019-10-07 21:30:01.012 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.insert   : ==>  Preparing: INSERT INTO sys_role_permission ( roleid, permissionid ) VALUES ( ?, ? ) 
+2019-10-07 21:30:01.013 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.insert   : ==> Parameters: 2(Integer), 28(Integer)
+2019-10-07 21:30:01.016 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.RolePermissionMapper.insert   : <==    Updates: 1
+2019-10-07 21:30:01.020 DEBUG 1044 --- [http-nio-8080-exec-4] com.lena.dao.RoleMapper.update           : ==>  Preparing: UPDATE sys_role SET name=?, descirption=? WHERE id = ? 
+2019-10-07 21:30:01.021 DEBUG 1044 --- [http-nio-8080-exec-4] com.lena.dao.RoleMapper.update           : ==> Parameters: USER(String), 用户(String), 2(Integer)
+2019-10-07 21:30:01.026 DEBUG 1044 --- [http-nio-8080-exec-4] com.lena.dao.RoleMapper.update           : <==    Updates: 1
+2019-10-07 21:30:02.207 DEBUG 1044 --- [http-nio-8080-exec-6] com.lena.dao.RoleMapper.countAllRoles    : ==>  Preparing: select count(*) from sys_role t 
+2019-10-07 21:30:02.207 DEBUG 1044 --- [http-nio-8080-exec-6] com.lena.dao.RoleMapper.countAllRoles    : ==> Parameters: 
+2019-10-07 21:30:02.208 DEBUG 1044 --- [http-nio-8080-exec-6] com.lena.dao.RoleMapper.countAllRoles    : <==      Total: 1
+2019-10-07 21:30:02.209 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
+2019-10-07 21:30:02.211 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 21:30:02.217 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 10
+2019-10-07 21:30:10.487 DEBUG 1044 --- [http-nio-8080-exec-8] com.lena.dao.RoleMapper.selectById       : ==>  Preparing: SELECT id,name,descirption,createtime,updatetime FROM sys_role WHERE id=? 
+2019-10-07 21:30:10.488 DEBUG 1044 --- [http-nio-8080-exec-8] com.lena.dao.RoleMapper.selectById       : ==> Parameters: 3(Integer)
+2019-10-07 21:30:10.490 DEBUG 1044 --- [http-nio-8080-exec-8] com.lena.dao.RoleMapper.selectById       : <==      Total: 1
+2019-10-07 21:30:10.616 DEBUG 1044 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:30:10.617 DEBUG 1044 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:30:10.621 DEBUG 1044 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectList   : <==      Total: 27
+2019-10-07 21:30:10.621 DEBUG 1044 --- [http-nio-8080-exec-9] c.l.d.R.queryRolePermissionIdsByRid      : ==>  Preparing: select permissionid from sys_role_permission where roleid=? 
+2019-10-07 21:30:10.621 DEBUG 1044 --- [http-nio-8080-exec-9] c.l.d.R.queryRolePermissionIdsByRid      : ==> Parameters: 3(Integer)
+2019-10-07 21:30:10.624 DEBUG 1044 --- [http-nio-8080-exec-9] c.l.d.R.queryRolePermissionIdsByRid      : <==      Total: 0
+2019-10-07 21:30:17.897 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.delete   : ==>  Preparing: DELETE FROM sys_role_permission WHERE roleid = ? 
+2019-10-07 21:30:17.897 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.delete   : ==> Parameters: 3(Integer)
+2019-10-07 21:30:17.898 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.delete   : <==    Updates: 0
+2019-10-07 21:30:17.899 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==>  Preparing: INSERT INTO sys_role_permission ( roleid, permissionid ) VALUES ( ?, ? ) 
+2019-10-07 21:30:17.900 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==> Parameters: 3(Integer), 7(Integer)
+2019-10-07 21:30:17.982 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : <==    Updates: 1
+2019-10-07 21:30:17.982 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==>  Preparing: INSERT INTO sys_role_permission ( roleid, permissionid ) VALUES ( ?, ? ) 
+2019-10-07 21:30:17.983 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==> Parameters: 3(Integer), 27(Integer)
+2019-10-07 21:30:17.998 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : <==    Updates: 1
+2019-10-07 21:30:17.999 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==>  Preparing: INSERT INTO sys_role_permission ( roleid, permissionid ) VALUES ( ?, ? ) 
+2019-10-07 21:30:18.000 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==> Parameters: 3(Integer), 28(Integer)
+2019-10-07 21:30:18.013 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : <==    Updates: 1
+2019-10-07 21:30:18.013 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==>  Preparing: INSERT INTO sys_role_permission ( roleid, permissionid ) VALUES ( ?, ? ) 
+2019-10-07 21:30:18.014 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==> Parameters: 3(Integer), 16(Integer)
+2019-10-07 21:30:18.034 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : <==    Updates: 1
+2019-10-07 21:30:18.035 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==>  Preparing: INSERT INTO sys_role_permission ( roleid, permissionid ) VALUES ( ?, ? ) 
+2019-10-07 21:30:18.035 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==> Parameters: 3(Integer), 17(Integer)
+2019-10-07 21:30:18.054 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : <==    Updates: 1
+2019-10-07 21:30:18.054 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==>  Preparing: INSERT INTO sys_role_permission ( roleid, permissionid ) VALUES ( ?, ? ) 
+2019-10-07 21:30:18.055 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : ==> Parameters: 3(Integer), 18(Integer)
+2019-10-07 21:30:18.068 DEBUG 1044 --- [http-nio-8080-exec-10] c.lena.dao.RolePermissionMapper.insert   : <==    Updates: 1
+2019-10-07 21:30:18.076 DEBUG 1044 --- [http-nio-8080-exec-10] com.lena.dao.RoleMapper.update           : ==>  Preparing: UPDATE sys_role SET name=?, descirption=? WHERE id = ? 
+2019-10-07 21:30:18.078 DEBUG 1044 --- [http-nio-8080-exec-10] com.lena.dao.RoleMapper.update           : ==> Parameters: TEACHER(String), 教师(String), 3(Integer)
+2019-10-07 21:30:18.089 DEBUG 1044 --- [http-nio-8080-exec-10] com.lena.dao.RoleMapper.update           : <==    Updates: 1
+2019-10-07 21:30:19.141 DEBUG 1044 --- [http-nio-8080-exec-2] com.lena.dao.RoleMapper.countAllRoles    : ==>  Preparing: select count(*) from sys_role t 
+2019-10-07 21:30:19.141 DEBUG 1044 --- [http-nio-8080-exec-2] com.lena.dao.RoleMapper.countAllRoles    : ==> Parameters: 
+2019-10-07 21:30:19.142 DEBUG 1044 --- [http-nio-8080-exec-2] com.lena.dao.RoleMapper.countAllRoles    : <==      Total: 1
+2019-10-07 21:30:19.143 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
+2019-10-07 21:30:19.143 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 21:30:19.145 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 10
+2019-10-07 21:30:25.031 DEBUG 1044 --- [http-nio-8080-exec-3] com.lena.dao.RoleMapper.selectById       : ==>  Preparing: SELECT id,name,descirption,createtime,updatetime FROM sys_role WHERE id=? 
+2019-10-07 21:30:25.032 DEBUG 1044 --- [http-nio-8080-exec-3] com.lena.dao.RoleMapper.selectById       : ==> Parameters: 2(Integer)
+2019-10-07 21:30:25.034 DEBUG 1044 --- [http-nio-8080-exec-3] com.lena.dao.RoleMapper.selectById       : <==      Total: 1
+2019-10-07 21:30:25.117 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:30:25.117 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:30:25.122 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : <==      Total: 27
+2019-10-07 21:30:25.125 DEBUG 1044 --- [http-nio-8080-exec-4] c.l.d.R.queryRolePermissionIdsByRid      : ==>  Preparing: select permissionid from sys_role_permission where roleid=? 
+2019-10-07 21:30:25.126 DEBUG 1044 --- [http-nio-8080-exec-4] c.l.d.R.queryRolePermissionIdsByRid      : ==> Parameters: 2(Integer)
+2019-10-07 21:30:25.127 DEBUG 1044 --- [http-nio-8080-exec-4] c.l.d.R.queryRolePermissionIdsByRid      : <==      Total: 3
+2019-10-07 21:30:25.131 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE id IN (?,?,?) 
+2019-10-07 21:30:25.131 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 7(Integer), 27(Integer), 28(Integer)
+2019-10-07 21:30:25.136 DEBUG 1044 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : <==      Total: 3
+2019-10-07 21:31:11.027 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.deleteById   : ==>  Preparing: DELETE FROM sys_permission WHERE id=? 
+2019-10-07 21:31:11.028 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.deleteById   : ==> Parameters: 27(Integer)
+2019-10-07 21:31:11.030 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.deleteById   : <==    Updates: 1
+2019-10-07 21:31:11.034 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:31:11.034 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 27(Integer)
+2019-10-07 21:31:11.048 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : <==      Total: 1
+2019-10-07 21:31:11.050 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.RolePermissionMapper.delete   : ==>  Preparing: DELETE FROM sys_role_permission WHERE permissionid IN (?,?) 
+2019-10-07 21:31:11.050 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.RolePermissionMapper.delete   : ==> Parameters: 28(Integer), 27(Integer)
+2019-10-07 21:31:11.054 DEBUG 1044 --- [http-nio-8080-exec-6] c.lena.dao.RolePermissionMapper.delete   : <==    Updates: 4
+2019-10-07 21:31:11.056 DEBUG 1044 --- [http-nio-8080-exec-6] com.lena.dao.PermissionMapper.delete     : ==>  Preparing: DELETE FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:31:11.056 DEBUG 1044 --- [http-nio-8080-exec-6] com.lena.dao.PermissionMapper.delete     : ==> Parameters: 27(Integer)
+2019-10-07 21:31:11.058 DEBUG 1044 --- [http-nio-8080-exec-6] com.lena.dao.PermissionMapper.delete     : <==    Updates: 1
+2019-10-07 21:31:31.980 DEBUG 1044 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : ==>  Preparing: DELETE FROM sys_permission WHERE id=? 
+2019-10-07 21:31:31.982 DEBUG 1044 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : ==> Parameters: 27(Integer)
+2019-10-07 21:31:31.983 DEBUG 1044 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : <==    Updates: 0
+2019-10-07 21:31:31.985 DEBUG 1044 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:31:31.986 DEBUG 1044 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 27(Integer)
+2019-10-07 21:31:31.987 DEBUG 1044 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : <==      Total: 0
+2019-10-07 21:31:31.989 DEBUG 1044 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : ==>  Preparing: DELETE FROM sys_role_permission WHERE permissionid IN (?) 
+2019-10-07 21:31:31.989 DEBUG 1044 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : ==> Parameters: 27(Integer)
+2019-10-07 21:31:31.989 DEBUG 1044 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : <==    Updates: 0
+2019-10-07 21:31:31.990 DEBUG 1044 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : ==>  Preparing: DELETE FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:31:31.991 DEBUG 1044 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : ==> Parameters: 27(Integer)
+2019-10-07 21:31:31.993 DEBUG 1044 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : <==    Updates: 0
+2019-10-07 21:32:03.378 DEBUG 1044 --- [http-nio-8080-exec-2] com.lena.dao.RoleMapper.countAllRoles    : ==>  Preparing: select count(*) from sys_role t 
+2019-10-07 21:32:03.379 DEBUG 1044 --- [http-nio-8080-exec-2] com.lena.dao.RoleMapper.countAllRoles    : ==> Parameters: 
+2019-10-07 21:32:03.380 DEBUG 1044 --- [http-nio-8080-exec-2] com.lena.dao.RoleMapper.countAllRoles    : <==      Total: 1
+2019-10-07 21:32:03.381 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
+2019-10-07 21:32:03.381 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 21:32:03.383 DEBUG 1044 --- [http-nio-8080-exec-2] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 10
+2019-10-07 21:32:03.392 DEBUG 1044 --- [http-nio-8080-exec-9] com.lena.dao.UsersMapper.countAllUsers   : ==>  Preparing: select count(*) from sys_users t 
+2019-10-07 21:32:03.393 DEBUG 1044 --- [http-nio-8080-exec-9] com.lena.dao.UsersMapper.countAllUsers   : ==> Parameters: 
+2019-10-07 21:32:03.395 DEBUG 1044 --- [http-nio-8080-exec-9] com.lena.dao.UsersMapper.countAllUsers   : <==      Total: 1
+2019-10-07 21:32:03.398 DEBUG 1044 --- [http-nio-8080-exec-9] c.l.dao.UsersMapper.getallUsersByPage    : ==>  Preparing: select * from sys_users t order by t.id limit ?,? 
+2019-10-07 21:32:03.398 DEBUG 1044 --- [http-nio-8080-exec-9] c.l.dao.UsersMapper.getallUsersByPage    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 21:32:03.403 DEBUG 1044 --- [http-nio-8080-exec-9] c.l.dao.UsersMapper.getallUsersByPage    : <==      Total: 10
+2019-10-07 21:32:03.405 DEBUG 1044 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:32:03.405 DEBUG 1044 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:32:03.408 DEBUG 1044 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:32:03.408 DEBUG 1044 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:32:03.408 DEBUG 1044 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:32:03.418 DEBUG 1044 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:33:38.895  INFO 11748 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 11748 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 21:33:38.904 DEBUG 11748 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 21:33:38.904  INFO 11748 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 21:33:40.959  INFO 11748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 21:33:40.987  INFO 11748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 21:33:40.987  INFO 11748 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 21:33:41.175  INFO 11748 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 21:33:41.175  INFO 11748 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2165 ms
+2019-10-07 21:33:41.374  INFO 11748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 21:33:41.554  INFO 11748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 21:33:41.728  WARN 11748 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 21:33:41.841  WARN 11748 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 21:33:42.090  INFO 11748 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 21:33:42.164  INFO 11748 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 21:33:42.380  INFO 11748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 21:33:42.383  INFO 11748 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 4.64 seconds (JVM running for 6.27)
+2019-10-07 21:36:13.428  INFO 11748 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570455123] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-07 21:36:13.436  INFO 11748 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-07 21:36:13.437  INFO 11748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-07 21:36:13.447  INFO 11748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-10-07 21:36:14.054 DEBUG 11748 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:36:14.085 DEBUG 11748 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:36:14.122 DEBUG 11748 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:36:39.998 DEBUG 11748 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : ==>  Preparing: INSERT INTO sys_permission ( parentid, name, css, href, type, permission, sort ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2019-10-07 21:36:40.001 DEBUG 11748 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : ==> Parameters: 2(Integer), 测试9(String), (String), (String), 1(Integer), (String), 100(Integer)
+2019-10-07 21:36:40.007 DEBUG 11748 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : <==    Updates: 1
+2019-10-07 21:36:41.611 DEBUG 11748 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:36:41.612 DEBUG 11748 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:36:41.615 DEBUG 11748 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:36:41.616 DEBUG 11748 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:36:41.617 DEBUG 11748 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:36:41.622 DEBUG 11748 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 21:37:24.887 DEBUG 11748 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : ==>  Preparing: DELETE FROM sys_permission WHERE id=? 
+2019-10-07 21:37:24.888 DEBUG 11748 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : ==> Parameters: 29(Integer)
+2019-10-07 21:37:24.894 DEBUG 11748 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : <==    Updates: 1
+2019-10-07 21:37:24.932 DEBUG 11748 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:37:24.934 DEBUG 11748 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 29(Integer)
+2019-10-07 21:37:24.937 DEBUG 11748 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : <==      Total: 0
+2019-10-07 21:37:24.944 DEBUG 11748 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : ==>  Preparing: DELETE FROM sys_role_permission WHERE permissionid IN (?) 
+2019-10-07 21:37:24.945 DEBUG 11748 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : ==> Parameters: 29(Integer)
+2019-10-07 21:37:24.946 DEBUG 11748 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : <==    Updates: 0
+2019-10-07 21:37:24.948 DEBUG 11748 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : ==>  Preparing: DELETE FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:37:24.948 DEBUG 11748 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : ==> Parameters: 29(Integer)
+2019-10-07 21:37:24.949 DEBUG 11748 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : <==    Updates: 0
+2019-10-07 21:41:21.544  INFO 1180 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 1180 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 21:41:21.548 DEBUG 1180 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 21:41:21.549  INFO 1180 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 21:41:22.862  INFO 1180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 21:41:22.883  INFO 1180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 21:41:22.884  INFO 1180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 21:41:23.036  INFO 1180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 21:41:23.036  INFO 1180 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1429 ms
+2019-10-07 21:41:23.220  INFO 1180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 21:41:23.331  INFO 1180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 21:41:23.535  WARN 1180 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 21:41:23.645  WARN 1180 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 21:41:23.945  INFO 1180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 21:41:24.044  INFO 1180 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 21:41:24.248  INFO 1180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 21:41:24.251  INFO 1180 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 3.472 seconds (JVM running for 5.25)
+2019-10-07 21:41:36.122  INFO 1180 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570455123] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-07 21:41:36.130  INFO 1180 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-07 21:41:36.130  INFO 1180 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-07 21:41:36.138  INFO 1180 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-10-07 21:41:36.898 DEBUG 1180 --- [http-nio-8080-exec-8] com.lena.dao.RoleMapper.countAllRoles    : ==>  Preparing: select count(*) from sys_role t 
+2019-10-07 21:41:36.900 DEBUG 1180 --- [http-nio-8080-exec-5] com.lena.dao.UsersMapper.countAllUsers   : ==>  Preparing: select count(*) from sys_users t 
+2019-10-07 21:41:36.914 DEBUG 1180 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:41:36.937 DEBUG 1180 --- [http-nio-8080-exec-8] com.lena.dao.RoleMapper.countAllRoles    : ==> Parameters: 
+2019-10-07 21:41:36.937 DEBUG 1180 --- [http-nio-8080-exec-5] com.lena.dao.UsersMapper.countAllUsers   : ==> Parameters: 
+2019-10-07 21:41:36.937 DEBUG 1180 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:41:36.971 DEBUG 1180 --- [http-nio-8080-exec-5] com.lena.dao.UsersMapper.countAllUsers   : <==      Total: 1
+2019-10-07 21:41:36.971 DEBUG 1180 --- [http-nio-8080-exec-8] com.lena.dao.RoleMapper.countAllRoles    : <==      Total: 1
+2019-10-07 21:41:36.971 DEBUG 1180 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:41:36.975 DEBUG 1180 --- [http-nio-8080-exec-5] c.l.dao.UsersMapper.getallUsersByPage    : ==>  Preparing: select * from sys_users t order by t.id limit ?,? 
+2019-10-07 21:41:36.975 DEBUG 1180 --- [http-nio-8080-exec-8] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
+2019-10-07 21:41:36.975 DEBUG 1180 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:41:36.975 DEBUG 1180 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:41:36.975 DEBUG 1180 --- [http-nio-8080-exec-5] c.l.dao.UsersMapper.getallUsersByPage    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 21:41:36.975 DEBUG 1180 --- [http-nio-8080-exec-8] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 21:41:36.985 DEBUG 1180 --- [http-nio-8080-exec-5] c.l.dao.UsersMapper.getallUsersByPage    : <==      Total: 10
+2019-10-07 21:41:36.987 DEBUG 1180 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:41:36.993 DEBUG 1180 --- [http-nio-8080-exec-8] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 10
+2019-10-07 21:41:38.904 DEBUG 1180 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:41:38.904 DEBUG 1180 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:41:38.908 DEBUG 1180 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:42:06.917 DEBUG 1180 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:42:06.918 DEBUG 1180 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:42:06.927 DEBUG 1180 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:42:30.903 DEBUG 1180 --- [http-nio-8080-exec-10] com.lena.dao.PermissionMapper.insert     : ==>  Preparing: INSERT INTO sys_permission ( parentid, name, css, href, type, permission, sort ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2019-10-07 21:42:30.905 DEBUG 1180 --- [http-nio-8080-exec-10] com.lena.dao.PermissionMapper.insert     : ==> Parameters: 7(Integer), 测试22(String), (String), (String), 1(Integer), (String), 100(Integer)
+2019-10-07 21:42:30.912 DEBUG 1180 --- [http-nio-8080-exec-10] com.lena.dao.PermissionMapper.insert     : <==    Updates: 1
+2019-10-07 21:42:32.615 DEBUG 1180 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:42:32.616 DEBUG 1180 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:42:32.617 DEBUG 1180 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:42:32.618 DEBUG 1180 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:42:32.619 DEBUG 1180 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:42:32.623 DEBUG 1180 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 21:42:40.290 DEBUG 1180 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.deleteById   : ==>  Preparing: DELETE FROM sys_permission WHERE id=? 
+2019-10-07 21:42:40.291 DEBUG 1180 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.deleteById   : ==> Parameters: 30(Integer)
+2019-10-07 21:42:40.296 DEBUG 1180 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.deleteById   : <==    Updates: 1
+2019-10-07 21:42:40.315 DEBUG 1180 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:42:40.316 DEBUG 1180 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 30(Integer)
+2019-10-07 21:42:40.317 DEBUG 1180 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : <==      Total: 0
+2019-10-07 21:42:40.320 DEBUG 1180 --- [http-nio-8080-exec-6] c.lena.dao.RolePermissionMapper.delete   : ==>  Preparing: DELETE FROM sys_role_permission WHERE permissionid IN (?) 
+2019-10-07 21:42:40.321 DEBUG 1180 --- [http-nio-8080-exec-6] c.lena.dao.RolePermissionMapper.delete   : ==> Parameters: 30(Integer)
+2019-10-07 21:42:40.322 DEBUG 1180 --- [http-nio-8080-exec-6] c.lena.dao.RolePermissionMapper.delete   : <==    Updates: 0
+2019-10-07 21:42:40.325 DEBUG 1180 --- [http-nio-8080-exec-6] com.lena.dao.PermissionMapper.delete     : ==>  Preparing: DELETE FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:42:40.325 DEBUG 1180 --- [http-nio-8080-exec-6] com.lena.dao.PermissionMapper.delete     : ==> Parameters: 30(Integer)
+2019-10-07 21:42:40.327 DEBUG 1180 --- [http-nio-8080-exec-6] com.lena.dao.PermissionMapper.delete     : <==    Updates: 0
+2019-10-07 21:42:41.751 DEBUG 1180 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:42:41.751 DEBUG 1180 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:42:41.753 DEBUG 1180 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:42:41.754 DEBUG 1180 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:42:41.755 DEBUG 1180 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:42:41.758 DEBUG 1180 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:42:41.763 DEBUG 1180 --- [http-nio-8080-exec-10] com.lena.dao.UsersMapper.countAllUsers   : ==>  Preparing: select count(*) from sys_users t 
+2019-10-07 21:42:41.764 DEBUG 1180 --- [http-nio-8080-exec-10] com.lena.dao.UsersMapper.countAllUsers   : ==> Parameters: 
+2019-10-07 21:42:41.765 DEBUG 1180 --- [http-nio-8080-exec-10] com.lena.dao.UsersMapper.countAllUsers   : <==      Total: 1
+2019-10-07 21:42:41.766 DEBUG 1180 --- [http-nio-8080-exec-10] c.l.dao.UsersMapper.getallUsersByPage    : ==>  Preparing: select * from sys_users t order by t.id limit ?,? 
+2019-10-07 21:42:41.766 DEBUG 1180 --- [http-nio-8080-exec-10] c.l.dao.UsersMapper.getallUsersByPage    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 21:42:41.769 DEBUG 1180 --- [http-nio-8080-exec-10] c.l.dao.UsersMapper.getallUsersByPage    : <==      Total: 10
+2019-10-07 21:42:41.773 DEBUG 1180 --- [http-nio-8080-exec-1] com.lena.dao.RoleMapper.countAllRoles    : ==>  Preparing: select count(*) from sys_role t 
+2019-10-07 21:42:41.773 DEBUG 1180 --- [http-nio-8080-exec-1] com.lena.dao.RoleMapper.countAllRoles    : ==> Parameters: 
+2019-10-07 21:42:41.774 DEBUG 1180 --- [http-nio-8080-exec-1] com.lena.dao.RoleMapper.countAllRoles    : <==      Total: 1
+2019-10-07 21:42:41.776 DEBUG 1180 --- [http-nio-8080-exec-1] c.lena.dao.RoleMapper.getallRolesByPage  : ==>  Preparing: select * from sys_role t order by t.id limit ?,? 
+2019-10-07 21:42:41.776 DEBUG 1180 --- [http-nio-8080-exec-1] c.lena.dao.RoleMapper.getallRolesByPage  : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 21:42:41.782 DEBUG 1180 --- [http-nio-8080-exec-1] c.lena.dao.RoleMapper.getallRolesByPage  : <==      Total: 10
+2019-10-07 21:43:08.399 DEBUG 1180 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:43:08.399 DEBUG 1180 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:43:08.400 DEBUG 1180 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:43:08.404 DEBUG 1180 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:43:08.404 DEBUG 1180 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:43:08.410 DEBUG 1180 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:44:29.287  INFO 7828 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 7828 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 21:44:29.290 DEBUG 7828 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 21:44:29.291  INFO 7828 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 21:44:30.537  INFO 7828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 21:44:30.558  INFO 7828 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 21:44:30.559  INFO 7828 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 21:44:30.707  INFO 7828 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 21:44:30.707  INFO 7828 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1359 ms
+2019-10-07 21:44:30.891  INFO 7828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 21:44:31.002  INFO 7828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 21:44:31.241  WARN 7828 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 21:44:31.384  WARN 7828 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 21:44:31.629  INFO 7828 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 21:44:31.700  INFO 7828 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 21:44:31.901  INFO 7828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 21:44:31.904  INFO 7828 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 3.362 seconds (JVM running for 5.093)
+2019-10-07 21:44:45.604  INFO 7828 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570455762] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-07 21:44:45.612  INFO 7828 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-07 21:44:45.612  INFO 7828 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-07 21:44:45.627  INFO 7828 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-10-07 21:44:46.157 DEBUG 7828 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:44:46.210 DEBUG 7828 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:44:46.277 DEBUG 7828 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:45:02.094 DEBUG 7828 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : ==>  Preparing: INSERT INTO sys_permission ( parentid, name, css, href, type, permission, sort ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2019-10-07 21:45:02.096 DEBUG 7828 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : ==> Parameters: 2(Integer), 测试44(String), (String), (String), 1(Integer), (String), 88(Integer)
+2019-10-07 21:45:02.102 DEBUG 7828 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : <==    Updates: 1
+2019-10-07 21:45:03.679 DEBUG 7828 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:45:03.680 DEBUG 7828 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:45:03.682 DEBUG 7828 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:45:03.684 DEBUG 7828 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:45:03.685 DEBUG 7828 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:45:03.692 DEBUG 7828 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 21:45:07.226 DEBUG 7828 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : ==>  Preparing: DELETE FROM sys_permission WHERE id=? 
+2019-10-07 21:45:07.227 DEBUG 7828 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : ==> Parameters: 31(Integer)
+2019-10-07 21:45:07.231 DEBUG 7828 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : <==    Updates: 1
+2019-10-07 21:45:07.262 DEBUG 7828 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:45:07.263 DEBUG 7828 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 31(Integer)
+2019-10-07 21:45:07.265 DEBUG 7828 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : <==      Total: 0
+2019-10-07 21:45:07.270 DEBUG 7828 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : ==>  Preparing: DELETE FROM sys_role_permission WHERE permissionid IN (?) 
+2019-10-07 21:45:07.270 DEBUG 7828 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : ==> Parameters: 31(Integer)
+2019-10-07 21:45:07.272 DEBUG 7828 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : <==    Updates: 0
+2019-10-07 21:45:07.274 DEBUG 7828 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : ==>  Preparing: DELETE FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:45:07.274 DEBUG 7828 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : ==> Parameters: 31(Integer)
+2019-10-07 21:45:07.275 DEBUG 7828 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : <==    Updates: 0
+2019-10-07 21:45:15.042 DEBUG 7828 --- [http-nio-8080-exec-1] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:45:15.042 DEBUG 7828 --- [http-nio-8080-exec-1] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:45:15.043 DEBUG 7828 --- [http-nio-8080-exec-1] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:45:15.044 DEBUG 7828 --- [http-nio-8080-exec-1] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:45:15.045 DEBUG 7828 --- [http-nio-8080-exec-1] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:45:15.051 DEBUG 7828 --- [http-nio-8080-exec-1] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:46:09.855  INFO 9392 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 9392 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 21:46:09.859 DEBUG 9392 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 21:46:09.859  INFO 9392 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 21:46:11.137  INFO 9392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 21:46:11.166  INFO 9392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 21:46:11.167  INFO 9392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 21:46:11.327  INFO 9392 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 21:46:11.328  INFO 9392 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1408 ms
+2019-10-07 21:46:11.509  INFO 9392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 21:46:11.621  INFO 9392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 21:46:11.812  WARN 9392 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 21:46:11.919  WARN 9392 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 21:46:12.215  INFO 9392 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 21:46:12.288  INFO 9392 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 21:46:12.512  INFO 9392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 21:46:12.516  INFO 9392 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 3.375 seconds (JVM running for 5.144)
+2019-10-07 21:46:17.061  INFO 9392 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570455762] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-07 21:46:17.068  INFO 9392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-07 21:46:17.069  INFO 9392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-07 21:46:17.074  INFO 9392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-10-07 21:46:17.609 DEBUG 9392 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:46:17.633 DEBUG 9392 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:46:17.668 DEBUG 9392 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
+2019-10-07 21:46:31.324 DEBUG 9392 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : ==>  Preparing: INSERT INTO sys_permission ( parentid, name, css, href, type, permission, sort ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2019-10-07 21:46:31.327 DEBUG 9392 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : ==> Parameters: 2(Integer), 测试88(String), (String), (String), 1(Integer), (String), 100(Integer)
+2019-10-07 21:46:31.333 DEBUG 9392 --- [http-nio-8080-exec-4] com.lena.dao.PermissionMapper.insert     : <==    Updates: 1
+2019-10-07 21:46:33.125 DEBUG 9392 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:46:33.127 DEBUG 9392 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:46:33.131 DEBUG 9392 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:46:33.132 DEBUG 9392 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:46:33.133 DEBUG 9392 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:46:33.140 DEBUG 9392 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 21:46:41.573 DEBUG 9392 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : ==>  Preparing: DELETE FROM sys_permission WHERE id=? 
+2019-10-07 21:46:41.573 DEBUG 9392 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : ==> Parameters: 32(Integer)
+2019-10-07 21:46:41.582 DEBUG 9392 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.deleteById   : <==    Updates: 1
+2019-10-07 21:46:41.604 DEBUG 9392 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:46:41.605 DEBUG 9392 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 32(Integer)
+2019-10-07 21:46:41.606 DEBUG 9392 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : <==      Total: 0
+2019-10-07 21:46:41.610 DEBUG 9392 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : ==>  Preparing: DELETE FROM sys_role_permission WHERE permissionid IN (?) 
+2019-10-07 21:46:41.611 DEBUG 9392 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : ==> Parameters: 32(Integer)
+2019-10-07 21:46:41.612 DEBUG 9392 --- [http-nio-8080-exec-8] c.lena.dao.RolePermissionMapper.delete   : <==    Updates: 0
+2019-10-07 21:46:41.614 DEBUG 9392 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : ==>  Preparing: DELETE FROM sys_permission WHERE parentid = ? 
+2019-10-07 21:46:41.615 DEBUG 9392 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : ==> Parameters: 32(Integer)
+2019-10-07 21:46:41.616 DEBUG 9392 --- [http-nio-8080-exec-8] com.lena.dao.PermissionMapper.delete     : <==    Updates: 0
+2019-10-07 21:46:42.838 DEBUG 9392 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 21:46:42.838 DEBUG 9392 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 21:46:42.839 DEBUG 9392 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 21:46:42.840 DEBUG 9392 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 21:46:42.841 DEBUG 9392 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 21:46:42.850 DEBUG 9392 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.selectList   : <==      Total: 25
