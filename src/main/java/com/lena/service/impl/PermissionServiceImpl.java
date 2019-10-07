@@ -1,6 +1,7 @@
 package com.lena.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
+import com.lena.base.DataGridView;
 import com.lena.base.result.Results;
 import com.lena.entity.Permission;
 import com.lena.dao.PermissionMapper;
@@ -38,8 +39,9 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
     }
 
     @Override
-    public Results<Permission> getMenuAll() {
-        return Results.success(0,permissionMapper.selectList(null));
+    public DataGridView getMenuAll() {
+
+        return new DataGridView(permissionMapper.selectCount(null).longValue(),permissionMapper.selectList(null));
     }
 
     @Override

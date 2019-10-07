@@ -64,7 +64,7 @@ public class PermissionController {
 
     @GetMapping("/menuAll")
     @ResponseBody
-    public Results getMenuAll(){
+    public DataGridView getMenuAll(){
         return permissionService.getMenuAll();
     }
 

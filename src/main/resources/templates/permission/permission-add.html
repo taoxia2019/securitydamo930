@@ -95,16 +95,17 @@
                 <input type="text" id="parentid" th:value="${permission.parentid}" name="parentid"
                        lay-verify="parentid"
                        autocomplete="off" class="layui-input">
-                <ul id="treeDemo" class="ztree"></ul>
+                <ul id="permissionTree" class="dtree" data-id="0"></ul>
+
             </div>
 
         </div>
 
-        <!--<div class="layui-form-item">
-            <div class="col-md-10">
-                <ul id="permissionTree" class="dtree" data-id="0"></ul>
-            </div>
-        </div>-->
+        <!--<div class="layui-form-item">-->
+            <!--<div class="col-md-10">-->
+                <!--<ul id="permissionTree" class="dtree" data-id="0"></ul>-->
+            <!--</div>-->
+        <!--</div>-->
 
 
         <div class="layui-form-item">
@@ -124,10 +125,10 @@
         var dtree = layui.dtree;
 
         //日期
-           laydate.render({
-               elem: '#L_birthday'
-               , format: 'yyyy-MM-dd'
-           });
+        //    laydate.render({
+        //        elem: '#L_birthday'
+        //        , format: 'yyyy-MM-dd'
+        //    });
         //自定义验证规则
         form.verify({
             name: function (value) {

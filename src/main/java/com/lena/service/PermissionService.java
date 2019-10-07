@@ -1,6 +1,7 @@
 package com.lena.service;
 
 import com.alibaba.fastjson.JSONArray;
+import com.lena.base.DataGridView;
 import com.lena.base.result.Results;
 import com.lena.entity.Permission;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -17,7 +18,7 @@ public interface PermissionService extends IService<Permission> {
 
     Results<Permission> listAllPermission();
 
-    Results<Permission> getMenuAll();
+    DataGridView getMenuAll();
 
     Results<Permission> savePermission(Permission permission);
 
