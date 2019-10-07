@@ -2981,3 +2981,178 @@ org.attoparser.ParseException: (Line = 18, Column = 97) Malformed markup: Attrib
 2019-10-07 20:11:33.592 DEBUG 7664 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
 2019-10-07 20:11:33.594 DEBUG 7664 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
 2019-10-07 20:11:33.597 DEBUG 7664 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 20:16:02.924  INFO 3668 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 3668 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 20:16:02.927 DEBUG 3668 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 20:16:02.928  INFO 3668 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 20:16:04.215  INFO 3668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 20:16:04.240  INFO 3668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 20:16:04.240  INFO 3668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 20:16:04.406  INFO 3668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 20:16:04.406  INFO 3668 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1420 ms
+2019-10-07 20:16:04.652  INFO 3668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 20:16:04.943  INFO 3668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 20:16:05.223  WARN 3668 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 20:16:05.327  WARN 3668 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 20:16:05.625  INFO 3668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 20:16:05.700  INFO 3668 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 20:16:05.906  INFO 3668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 20:16:05.909  INFO 3668 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 3.68 seconds (JVM running for 5.256)
+2019-10-07 20:16:27.068  INFO 3668 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570450270] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-07 20:16:27.071  INFO 3668 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-07 20:16:27.071  INFO 3668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-07 20:16:27.071  INFO 3668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2019-10-07 20:16:27.921 DEBUG 3668 --- [http-nio-8080-exec-4] com.lena.dao.UsersMapper.countAllUsers   : ==>  Preparing: select count(*) from sys_users t 
+2019-10-07 20:16:27.928 DEBUG 3668 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 20:16:27.957 DEBUG 3668 --- [http-nio-8080-exec-4] com.lena.dao.UsersMapper.countAllUsers   : ==> Parameters: 
+2019-10-07 20:16:27.957 DEBUG 3668 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 20:16:27.994 DEBUG 3668 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 20:16:27.994 DEBUG 3668 --- [http-nio-8080-exec-4] com.lena.dao.UsersMapper.countAllUsers   : <==      Total: 1
+2019-10-07 20:16:27.996 DEBUG 3668 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 20:16:27.998 DEBUG 3668 --- [http-nio-8080-exec-4] c.l.dao.UsersMapper.getallUsersByPage    : ==>  Preparing: select * from sys_users t order by t.id limit ?,? 
+2019-10-07 20:16:27.998 DEBUG 3668 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 20:16:27.999 DEBUG 3668 --- [http-nio-8080-exec-4] c.l.dao.UsersMapper.getallUsersByPage    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 20:16:28.008 DEBUG 3668 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 20:16:28.008 DEBUG 3668 --- [http-nio-8080-exec-4] c.l.dao.UsersMapper.getallUsersByPage    : <==      Total: 10
+2019-10-07 20:16:32.450 DEBUG 3668 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectById   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE id=? 
+2019-10-07 20:16:32.451 DEBUG 3668 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectById   : ==> Parameters: 27(Integer)
+2019-10-07 20:16:32.458 DEBUG 3668 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectById   : <==      Total: 1
+2019-10-07 20:16:32.687 DEBUG 3668 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 20:16:32.688 DEBUG 3668 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 20:16:32.701 DEBUG 3668 --- [http-nio-8080-exec-8] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 20:19:24.716  INFO 13008 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 13008 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 20:19:24.716 DEBUG 13008 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 20:19:24.716  INFO 13008 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 20:19:26.135  INFO 13008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 20:19:26.166  INFO 13008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 20:19:26.166  INFO 13008 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 20:19:26.345  INFO 13008 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 20:19:26.345  INFO 13008 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1551 ms
+2019-10-07 20:19:26.536  INFO 13008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 20:19:26.683  INFO 13008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 20:19:26.868  WARN 13008 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 20:19:26.947  WARN 13008 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 20:19:27.206  INFO 13008 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 20:19:27.291  INFO 13008 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 20:19:27.469  INFO 13008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 20:19:27.485  INFO 13008 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 3.463 seconds (JVM running for 5.008)
+2019-10-07 20:19:35.906  INFO 13008 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570450588] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-07 20:19:35.910  INFO 13008 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-07 20:19:35.910  INFO 13008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-07 20:19:35.910  INFO 13008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2019-10-07 20:19:36.665 DEBUG 13008 --- [http-nio-8080-exec-10] com.lena.dao.UsersMapper.countAllUsers   : ==>  Preparing: select count(*) from sys_users t 
+2019-10-07 20:19:36.673 DEBUG 13008 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 20:19:36.706 DEBUG 13008 --- [http-nio-8080-exec-10] com.lena.dao.UsersMapper.countAllUsers   : ==> Parameters: 
+2019-10-07 20:19:36.706 DEBUG 13008 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 20:19:36.745 DEBUG 13008 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 20:19:36.746 DEBUG 13008 --- [http-nio-8080-exec-10] com.lena.dao.UsersMapper.countAllUsers   : <==      Total: 1
+2019-10-07 20:19:36.750 DEBUG 13008 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 20:19:36.750 DEBUG 13008 --- [http-nio-8080-exec-10] c.l.dao.UsersMapper.getallUsersByPage    : ==>  Preparing: select * from sys_users t order by t.id limit ?,? 
+2019-10-07 20:19:36.750 DEBUG 13008 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 20:19:36.751 DEBUG 13008 --- [http-nio-8080-exec-10] c.l.dao.UsersMapper.getallUsersByPage    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 20:19:36.758 DEBUG 13008 --- [http-nio-8080-exec-9] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 20:19:36.758 DEBUG 13008 --- [http-nio-8080-exec-10] c.l.dao.UsersMapper.getallUsersByPage    : <==      Total: 10
+2019-10-07 20:19:38.592 DEBUG 13008 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectById   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE id=? 
+2019-10-07 20:19:38.594 DEBUG 13008 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectById   : ==> Parameters: 3(Integer)
+2019-10-07 20:19:38.597 DEBUG 13008 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectById   : <==      Total: 1
+2019-10-07 20:19:38.784 DEBUG 13008 --- [http-nio-8080-exec-3] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 20:19:38.785 DEBUG 13008 --- [http-nio-8080-exec-3] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 20:19:38.796 DEBUG 13008 --- [http-nio-8080-exec-3] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 20:19:48.472 DEBUG 13008 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectById   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE id=? 
+2019-10-07 20:19:48.473 DEBUG 13008 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectById   : ==> Parameters: 27(Integer)
+2019-10-07 20:19:48.478 DEBUG 13008 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectById   : <==      Total: 1
+2019-10-07 20:19:48.617 DEBUG 13008 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 20:19:48.618 DEBUG 13008 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 20:19:48.622 DEBUG 13008 --- [http-nio-8080-exec-4] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 20:22:20.198  INFO 14872 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 14872 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 20:22:20.198 DEBUG 14872 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 20:22:20.198  INFO 14872 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 20:22:21.817  INFO 14872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 20:22:21.848  INFO 14872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 20:22:21.848  INFO 14872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 20:22:22.022  INFO 14872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 20:22:22.022  INFO 14872 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1746 ms
+2019-10-07 20:22:22.277  INFO 14872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 20:22:22.434  INFO 14872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 20:22:22.704  WARN 14872 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 20:22:22.835  WARN 14872 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 20:22:23.152  INFO 14872 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 20:22:23.252  INFO 14872 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 20:22:23.506  INFO 14872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 20:22:23.506  INFO 14872 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 4.264 seconds (JVM running for 6.247)
+2019-10-07 20:23:40.984  INFO 2836 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 2836 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 20:23:40.988 DEBUG 2836 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 20:23:40.989  INFO 2836 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 20:23:42.566  INFO 2836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 20:23:42.597  INFO 2836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 20:23:42.597  INFO 2836 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 20:23:42.763  INFO 2836 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 20:23:42.778  INFO 2836 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1710 ms
+2019-10-07 20:23:43.026  INFO 2836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 20:23:43.152  INFO 2836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 20:23:43.437  WARN 2836 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 20:23:43.568  WARN 2836 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 20:23:43.869  INFO 2836 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 20:23:43.991  INFO 2836 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 20:23:44.238  INFO 2836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 20:23:44.238  INFO 2836 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 4.184 seconds (JVM running for 6.008)
+2019-10-07 20:24:09.431  INFO 2836 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570450776] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-07 20:24:09.439  INFO 2836 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-07 20:24:09.441  INFO 2836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-07 20:24:09.452  INFO 2836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-10-07 20:24:09.601 DEBUG 2836 --- [http-nio-8080-exec-1] c.lena.dao.PermissionMapper.selectById   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE id=? 
+2019-10-07 20:24:09.664 DEBUG 2836 --- [http-nio-8080-exec-1] c.lena.dao.PermissionMapper.selectById   : ==> Parameters: 27(Integer)
+2019-10-07 20:24:09.767 DEBUG 2836 --- [http-nio-8080-exec-1] c.lena.dao.PermissionMapper.selectById   : <==      Total: 1
+2019-10-07 20:24:10.478 DEBUG 2836 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 20:24:10.479 DEBUG 2836 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 20:24:10.484 DEBUG 2836 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 20:26:47.298  INFO 15260 --- [main] com.lena.Securitydemo930Application      : Starting Securitydemo930Application on DESKTOP-DMA9EGE with PID 15260 (D:\securitydamo930-master\securitydamo930-master\target\classes started by FF in D:\securitydamo930-master\securitydamo930-master)
+2019-10-07 20:26:47.301 DEBUG 15260 --- [main] com.lena.Securitydemo930Application      : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-07 20:26:47.301  INFO 15260 --- [main] com.lena.Securitydemo930Application      : The following profiles are active: dev
+2019-10-07 20:26:48.518  INFO 15260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-07 20:26:48.542  INFO 15260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-07 20:26:48.542  INFO 15260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-07 20:26:48.690  INFO 15260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-07 20:26:48.690  INFO 15260 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1331 ms
+2019-10-07 20:26:48.870  INFO 15260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-07 20:26:48.977  INFO 15260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-07 20:26:49.194  WARN 15260 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.RolePermission.
+2019-10-07 20:26:49.278  WARN 15260 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.lena.entity.UserRole.
+2019-10-07 20:26:49.559  INFO 15260 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-07 20:26:49.632  INFO 15260 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-07 20:26:49.833  INFO 15260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-07 20:26:49.835  INFO 15260 --- [main] com.lena.Securitydemo930Application      : Started Securitydemo930Application in 3.264 seconds (JVM running for 5.035)
+2019-10-07 20:26:59.535  INFO 15260 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1569919108,1570325157; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1570450776] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-10-07 20:26:59.551  INFO 15260 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-07 20:26:59.551  INFO 15260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-07 20:26:59.559  INFO 15260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-10-07 20:27:00.521 DEBUG 15260 --- [http-nio-8080-exec-4] com.lena.dao.UsersMapper.countAllUsers   : ==>  Preparing: select count(*) from sys_users t 
+2019-10-07 20:27:00.537 DEBUG 15260 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 20:27:00.568 DEBUG 15260 --- [http-nio-8080-exec-4] com.lena.dao.UsersMapper.countAllUsers   : ==> Parameters: 
+2019-10-07 20:27:00.568 DEBUG 15260 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 20:27:00.601 DEBUG 15260 --- [http-nio-8080-exec-4] com.lena.dao.UsersMapper.countAllUsers   : <==      Total: 1
+2019-10-07 20:27:00.601 DEBUG 15260 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 20:27:00.603 DEBUG 15260 --- [http-nio-8080-exec-4] c.l.dao.UsersMapper.getallUsersByPage    : ==>  Preparing: select * from sys_users t order by t.id limit ?,? 
+2019-10-07 20:27:00.603 DEBUG 15260 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 20:27:00.603 DEBUG 15260 --- [http-nio-8080-exec-4] c.l.dao.UsersMapper.getallUsersByPage    : ==> Parameters: 0(Integer), 10(Integer)
+2019-10-07 20:27:00.603 DEBUG 15260 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 20:27:00.619 DEBUG 15260 --- [http-nio-8080-exec-4] c.l.dao.UsersMapper.getallUsersByPage    : <==      Total: 10
+2019-10-07 20:27:00.619 DEBUG 15260 --- [http-nio-8080-exec-5] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 20:27:04.440 DEBUG 15260 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectById   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission WHERE id=? 
+2019-10-07 20:27:04.441 DEBUG 15260 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectById   : ==> Parameters: 27(Integer)
+2019-10-07 20:27:04.443 DEBUG 15260 --- [http-nio-8080-exec-6] c.lena.dao.PermissionMapper.selectById   : <==      Total: 1
+2019-10-07 20:27:04.714 DEBUG 15260 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 20:27:04.715 DEBUG 15260 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 20:27:04.721 DEBUG 15260 --- [http-nio-8080-exec-7] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26
+2019-10-07 20:27:19.429 DEBUG 15260 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.updateById   : ==>  Preparing: UPDATE sys_permission SET parentid=?, name=?, css=?, href=?, type=?, permission=?, sort=? WHERE id=? 
+2019-10-07 20:27:19.433 DEBUG 15260 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.updateById   : ==> Parameters: 7(Integer), 测试7(String), (String), (String), 1(Integer), (String), 104(Integer), 27(Integer)
+2019-10-07 20:27:19.444 DEBUG 15260 --- [http-nio-8080-exec-10] c.lena.dao.PermissionMapper.updateById   : <==    Updates: 1
+2019-10-07 20:27:20.773 DEBUG 15260 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM sys_permission 
+2019-10-07 20:27:20.775 DEBUG 15260 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectCount  : ==> Parameters: 
+2019-10-07 20:27:20.775 DEBUG 15260 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectCount  : <==      Total: 1
+2019-10-07 20:27:20.776 DEBUG 15260 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==>  Preparing: SELECT id,parentid,name,css,href,type,permission,sort FROM sys_permission 
+2019-10-07 20:27:20.776 DEBUG 15260 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : ==> Parameters: 
+2019-10-07 20:27:20.779 DEBUG 15260 --- [http-nio-8080-exec-2] c.lena.dao.PermissionMapper.selectList   : <==      Total: 26

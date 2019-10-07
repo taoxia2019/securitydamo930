@@ -54,12 +54,15 @@ public class PermissionController {
     @RequestMapping(value = "/edit",method = RequestMethod.GET)
     public String editPermission(Model model,Permission permission){
         model.addAttribute("permission",permissionService.getById(permission.getId()));
-        return "permission/permission-edit";
+        return "permission/permission-add";
     }
 
     @RequestMapping(value = "/edit",method=RequestMethod.POST)
     @ResponseBody
     public Results<Permission> editPermission(@RequestBody Permission permission){
+        System.out.println("----");
+        System.out.println(permission.toString());
+        System.out.println("----");
         return permissionService.editPermission(permission);
     }
 

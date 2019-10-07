@@ -94,7 +94,7 @@
             <div class="layui-input-block">
                 <div class="layui-unselect layui-form-select" id="parentId">
                     <div class="layui-select-title">
-                        <input type="text" name="parentId" id="input_parentId" placeholder="请选择" readonly=""
+                        <input type="text" name="parentId" id="input_parentId" th:value="${permission.parentid}" placeholder="请选择" readonly=""
                                class="layui-input layui-unselect">
                         <i class="layui-edge"></i>
                     </div>
@@ -183,7 +183,7 @@
                     isUpdate = true;
                 }
                 $.ajax({
-                    url: isUpdate ? "permission/edit" : "/permission/add",
+                    url: isUpdate ? "/permission/edit" : "/permission/add",
                     type: "POST",
                     contentType: "application/json;charset=utf-8",
                     data: JSON.stringify(data.field),
